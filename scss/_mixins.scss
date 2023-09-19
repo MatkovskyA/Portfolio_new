@@ -1,0 +1,18 @@
+@mixin title {
+    font-size: 30px;
+    color: $bcColor; // переменная из variables.
+    font-weight: bold;
+}
+
+@mixin grid ($cols, $margin) {
+    float: left;
+    background: $gridBackColor;
+    margin-right: $margin;
+    margin-bottom: $margin;
+    height: 150px;
+    width: ((100% - (($cols - 1) * $margin)) / $cols);
+
+    &:nth-child(#{$cols}n) {
+        margin-right: 0;
+    }
+}
