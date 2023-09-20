@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0px;
   margin: 0px;
@@ -107,6 +108,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+section {
+  margin-bottom: 130px;
+}
+
 header {
   padding: 15px 0;
   position: fixed;
@@ -181,9 +186,125 @@ nav .logo {
   margin-bottom: 30px;
 }
 .content .content__info a {
-  background-color: yellow;
+  background-color: rgb(255, 225, 0);
   padding: 10px 20px;
   margin: 10px;
   font-size: 24px;
   border-radius: 10px;
+}
+
+.present {
+  display: flex;
+  gap: 50px;
+}
+.present .present__image {
+  max-width: 500px;
+  min-width: 400px;
+}
+.present .present__inner {
+  margin-top: 40px;
+  position: relative;
+}
+.present .present__inner .h3_wrapper {
+  margin-bottom: 30px;
+}
+.present .present__inner .h3_wrapper::before {
+  content: "";
+  background-image: url(/resourses/icons8-круг.svg);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -34px;
+  left: -35px;
+}
+.present .present__inner .h2_wrapper {
+  margin-bottom: 40px;
+}
+.present .present__inner h3 {
+  position: relative;
+  z-index: 2;
+}
+.present .present__inner h2 {
+  padding-bottom: 10px;
+  border-bottom: 3px solid rgb(255, 225, 0);
+  border-bottom-right-radius: 10px;
+  display: inline;
+}
+.present .present__inner .p_wrapper {
+  margin-bottom: 50px;
+}
+.present .present__inner .p_wrapper p {
+  padding-right: 50px;
+}
+
+.competencies ul {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  row-gap: 40px;
+  padding-left: 35px;
+  position: relative;
+}
+.competencies ul li {
+  width: calc(50% - 25px);
+}
+.competencies ul .h4_wrapper {
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+}
+.competencies ul .one::before {
+  content: "";
+  background-image: url(/resourses/develop.svg);
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -10px;
+}
+.competencies ul .h4__image_bef::before {
+  content: "";
+  background-image: url(/resourses/mob.svg);
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -40px;
+}
+.competencies ul .three::before {
+  content: "";
+  background-image: url(/resourses/consalting.svg);
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -10px;
+}
+
+.projects_title {
+  text-align: center;
+  position: relative;
+}
+
+h3 {
+  position: relative;
+  z-index: 2;
+}
+
+.h3_wrapper {
+  margin-bottom: 30px;
+}
+
+.h3_wrapper::before {
+  content: "";
+  background-image: url(/resourses/icons8-круг.svg);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -35px;
+}
+
+.project img {
+  border-radius: 30px;
 }/*# sourceMappingURL=main.css.map */
