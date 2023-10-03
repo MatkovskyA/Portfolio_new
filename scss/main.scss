@@ -1,7 +1,9 @@
 @import "variables";
 @import "mixins";
 @import "reset";
-
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -28,7 +30,7 @@ nav {
     align-items: center;
     justify-content: space-between;  
     .nav_items {
-        background: white;
+        background: $white;
         padding: 10px;
         border-radius: 20px;
         ul {
@@ -45,9 +47,15 @@ nav {
     .logo {
         border-radius: 30px;
     }
-
 }
 
+.h4_wrapper {
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+//SECTION CONTENT------------------------------------------------
 .content {
     position: relative;
     min-height: 100vh;
@@ -78,7 +86,7 @@ nav {
         position: relative;
         z-index: 2;
         top: 400px;
-        color: #ffffff;
+        color: $white;
         background-color: rgba(121, 121, 121, 0.4);
         border-radius: 20px;
     }
@@ -99,8 +107,11 @@ nav {
     }
 }
 }
-
+// SECTION ABOUT__ME------------------------------------------------
+.about__me {
+    background: $gridBackColor;
 .present {
+    padding: 50px 0px;
     display: flex;
     gap: 50px;
 
@@ -125,8 +136,7 @@ nav {
             left: -35px;
         }
         .h2_wrapper {
-
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         h3 {
             position: relative;
@@ -145,60 +155,53 @@ nav {
                 padding-right: 50px;
             }
         }
-
     }
-}
-
-.competencies ul {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 50px;
-    row-gap: 40px;
-    padding-left: 35px;
-    position: relative;
-
-    li {
-        width: calc(50% - 25px);
-    }
-
-    .h4_wrapper {
-        margin-bottom: 25px;
+    .competencies ul {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 40px;
+        padding-left: 35px;
         position: relative;
-        z-index: 2;
-    }
-
-    .one::before {
-        content: "";
-        background-image: url(/resourses/develop.svg);
-        background-repeat: no-repeat;
-        width: 35px;
-        height: 35px;
-        position: absolute;  
-        left: -10px;
-    }
-
-    .h4__image_bef::before {
-        content: "";
-        background-image: url(/resourses/mob.svg);
-        background-repeat: no-repeat;
-        width: 35px;
-        height: 35px;
-        position: absolute;  
-        left: -40px;
-    }
-    .three::before {
-        content: "";
-        background-image: url(/resourses/consalting.svg);
-        background-repeat: no-repeat;
-        width: 35px;
-        height: 35px;
-        position: absolute;  
-        left: -10px;
+    
+        li {
+            width: calc(50% - 25px);
+        }
+    
+        .one::before {
+            content: "";
+            background-image: url(/resourses/develop.svg);
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 35px;
+            position: absolute;  
+            left: -10px;
+        }
+    
+        .h4__image_bef::before {
+            content: "";
+            background-image: url(/resourses/mob.svg);
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 35px;
+            position: absolute;  
+            left: -40px;
+        }
+        .three::before {
+            content: "";
+            background-image: url(/resourses/consalting.svg);
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 35px;
+            position: absolute;  
+            left: -10px;
+        }
     }
 }
-
+}
+//SECTION PROJECTS------------------------------------------------
 .my__projects {
-    background: #ffeded;
+    background: $gridBackColor;
     padding-bottom: 100px;
     padding-top: 50px;
 .projects__title {
@@ -237,5 +240,158 @@ h3 {
     }
 }
 }
+//SECTION EDUCATION------------------------------------------------
+.education {
+    display: flex;
+
+    .education__inner{
+        margin-top: 40px;
+        position: relative;
+        h2 {
+            padding-bottom: 0;
+        }
+    }
+    .h3_wrapper {
+        margin-bottom: 30px;
+    }
+    .h3_wrapper::before {
+        content: "";
+        background-image: url(/resourses/icons8-круг.svg);
+        width: 100px;
+        height: 100px;
+        position: absolute;  
+        top: -34px;
+        left: -35px;
+    }
+    .h2_wrapper {
+        margin-bottom: 50px;
+    }
+    h3 {
+        position: relative;
+        z-index: 2;
+    }
+    h2 {
+        padding-bottom: 10px;
+        border-bottom: 3px solid rgb(255, 225, 0);
+        border-bottom-right-radius: 10px;
+        display: inline;
+    }
+    .p_wrapper {
+        margin-bottom: 50px;
+
+        p {
+            padding-right: 50px;
+        }
+    }
+.education__inner ul {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 40px;
+        padding-left: 35px;
+        margin-right: 40px;
+        position: relative;
+    
+        li {
+            width: calc(50% - 25px);
+        }
+        .h4__image_bef::before {
+            content: "";
+            background-image: url(/resourses/diplom.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 75px;
+            height: 75px;
+            position: absolute;  
+            left: -60px;
+            top: -20px;
+        }
+
+        .h4__image_bef.hat::before {
+            background-image: url(/resourses/hat.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 75px;
+            height: 75px;
+            position: absolute;  
+            left: -60px;
+            top: -20px;
+        }
+    }
+    .present__image {
+        max-width: 500px;
+        min-width: 400px;
+    }
+}
+// section SKILLS------------------------------------------------
+.skills {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        row-gap: 40px;
+        text-align: center;
+    }
+    li {
+        height: 250px;
+        max-width: 300px;
+
+        img {
+            padding-bottom: 20px;
+        }
+    }
+    .skills__title {
+        text-align: center;
+        position: relative;
+        margin-bottom: 70px;
+    }
+    
+    .h3_wrapper {
+        margin-bottom: 30px;
+        h3 {
+            position: relative;
+        }
+    }
+    .h3_wrapper::before {
+        content: "";
+        background-image: url(/resourses/icons8-круг.svg);
+        width: 100px;
+        height: 100px;
+        position: absolute;  
+        top: -35px;
+    }
+    .skills__block_img-weight {
+        max-width: 100px;
+    }
+    .jQuery {
+        padding-top: 25px;
+    }
+}
+
+.hobby {
+    background: $gridBackColor;
+    padding-bottom: 100px;
+    padding-top: 50px;
+.hobby__title {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+.h3_wrapper {
+    margin-bottom: 30px;
+    h3 {
+        position: relative;
+    }
+}
+.h3_wrapper::before {
+    content: "";
+    background-image: url(/resourses/icons8-круг.svg);
+    width: 100px;
+    height: 100px;
+    position: absolute;  
+    top: -35px;
+}
+}
+
 
 

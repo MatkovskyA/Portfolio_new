@@ -49,7 +49,7 @@ h3 {
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 p {
@@ -102,6 +102,10 @@ label {
   cursor: pointer;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-family: "Open Sans", sans-serif;
@@ -128,7 +132,7 @@ nav {
   justify-content: space-between;
 }
 nav .nav_items {
-  background: white;
+  background: #fff;
   padding: 10px;
   border-radius: 20px;
 }
@@ -144,6 +148,12 @@ nav .nav_items ul li {
 }
 nav .logo {
   border-radius: 30px;
+}
+
+.h4_wrapper {
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
 }
 
 .content {
@@ -175,7 +185,7 @@ nav .logo {
   position: relative;
   z-index: 2;
   top: 400px;
-  color: #ffffff;
+  color: #fff;
   background-color: rgba(121, 121, 121, 0.4);
   border-radius: 20px;
 }
@@ -193,22 +203,26 @@ nav .logo {
   border-radius: 10px;
 }
 
-.present {
+.about__me {
+  background: rgb(254, 224, 229);
+}
+.about__me .present {
+  padding: 50px 0px;
   display: flex;
   gap: 50px;
 }
-.present .present__image {
+.about__me .present .present__image {
   max-width: 500px;
   min-width: 400px;
 }
-.present .present__inner {
+.about__me .present .present__inner {
   margin-top: 40px;
   position: relative;
 }
-.present .present__inner .h3_wrapper {
+.about__me .present .present__inner .h3_wrapper {
   margin-bottom: 30px;
 }
-.present .present__inner .h3_wrapper::before {
+.about__me .present .present__inner .h3_wrapper::before {
   content: "";
   background-image: url(/resourses/icons8-круг.svg);
   width: 100px;
@@ -217,27 +231,26 @@ nav .logo {
   top: -34px;
   left: -35px;
 }
-.present .present__inner .h2_wrapper {
-  margin-bottom: 40px;
+.about__me .present .present__inner .h2_wrapper {
+  margin-bottom: 50px;
 }
-.present .present__inner h3 {
+.about__me .present .present__inner h3 {
   position: relative;
   z-index: 2;
 }
-.present .present__inner h2 {
+.about__me .present .present__inner h2 {
   padding-bottom: 10px;
   border-bottom: 3px solid rgb(255, 225, 0);
   border-bottom-right-radius: 10px;
   display: inline;
 }
-.present .present__inner .p_wrapper {
+.about__me .present .present__inner .p_wrapper {
   margin-bottom: 50px;
 }
-.present .present__inner .p_wrapper p {
+.about__me .present .present__inner .p_wrapper p {
   padding-right: 50px;
 }
-
-.competencies ul {
+.about__me .present .competencies ul {
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 50px;
@@ -246,15 +259,10 @@ nav .logo {
   padding-left: 35px;
   position: relative;
 }
-.competencies ul li {
+.about__me .present .competencies ul li {
   width: calc(50% - 25px);
 }
-.competencies ul .h4_wrapper {
-  margin-bottom: 25px;
-  position: relative;
-  z-index: 2;
-}
-.competencies ul .one::before {
+.about__me .present .competencies ul .one::before {
   content: "";
   background-image: url(/resourses/develop.svg);
   background-repeat: no-repeat;
@@ -263,7 +271,7 @@ nav .logo {
   position: absolute;
   left: -10px;
 }
-.competencies ul .h4__image_bef::before {
+.about__me .present .competencies ul .h4__image_bef::before {
   content: "";
   background-image: url(/resourses/mob.svg);
   background-repeat: no-repeat;
@@ -272,7 +280,7 @@ nav .logo {
   position: absolute;
   left: -40px;
 }
-.competencies ul .three::before {
+.about__me .present .competencies ul .three::before {
   content: "";
   background-image: url(/resourses/consalting.svg);
   background-repeat: no-repeat;
@@ -283,7 +291,7 @@ nav .logo {
 }
 
 .my__projects {
-  background: #ffeded;
+  background: rgb(254, 224, 229);
   padding-bottom: 100px;
   padding-top: 50px;
 }
@@ -321,4 +329,149 @@ nav .logo {
   left: 50px;
   background: rgb(255, 225, 0);
   border-radius: 20px;
+}
+
+.education {
+  display: flex;
+}
+.education .education__inner {
+  margin-top: 40px;
+  position: relative;
+}
+.education .education__inner h2 {
+  padding-bottom: 0;
+}
+.education .h3_wrapper {
+  margin-bottom: 30px;
+}
+.education .h3_wrapper::before {
+  content: "";
+  background-image: url(/resourses/icons8-круг.svg);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -34px;
+  left: -35px;
+}
+.education .h2_wrapper {
+  margin-bottom: 50px;
+}
+.education h3 {
+  position: relative;
+  z-index: 2;
+}
+.education h2 {
+  padding-bottom: 10px;
+  border-bottom: 3px solid rgb(255, 225, 0);
+  border-bottom-right-radius: 10px;
+  display: inline;
+}
+.education .p_wrapper {
+  margin-bottom: 50px;
+}
+.education .p_wrapper p {
+  padding-right: 50px;
+}
+.education .education__inner ul {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  row-gap: 40px;
+  padding-left: 35px;
+  margin-right: 40px;
+  position: relative;
+}
+.education .education__inner ul li {
+  width: calc(50% - 25px);
+}
+.education .education__inner ul .h4__image_bef::before {
+  content: "";
+  background-image: url(/resourses/diplom.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  left: -60px;
+  top: -20px;
+}
+.education .education__inner ul .h4__image_bef.hat::before {
+  background-image: url(/resourses/hat.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  left: -60px;
+  top: -20px;
+}
+.education .present__image {
+  max-width: 500px;
+  min-width: 400px;
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 40px;
+  text-align: center;
+}
+.skills li {
+  height: 250px;
+  max-width: 300px;
+}
+.skills li img {
+  padding-bottom: 20px;
+}
+.skills .skills__title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 70px;
+}
+.skills .h3_wrapper {
+  margin-bottom: 30px;
+}
+.skills .h3_wrapper h3 {
+  position: relative;
+}
+.skills .h3_wrapper::before {
+  content: "";
+  background-image: url(/resourses/icons8-круг.svg);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -35px;
+}
+.skills .skills__block_img-weight {
+  max-width: 100px;
+}
+.skills .jQuery {
+  padding-top: 25px;
+}
+
+.hobby {
+  background: rgb(254, 224, 229);
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+.hobby .hobby__title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+.hobby .h3_wrapper {
+  margin-bottom: 30px;
+}
+.hobby .h3_wrapper h3 {
+  position: relative;
+}
+.hobby .h3_wrapper::before {
+  content: "";
+  background-image: url(/resourses/icons8-круг.svg);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -35px;
 }/*# sourceMappingURL=main.css.map */
