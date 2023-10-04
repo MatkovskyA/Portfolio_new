@@ -128,7 +128,7 @@ nav {
         }
         .h3_wrapper::before {
             content: "";
-            background-image: url(resourses/icons8-круг.svg);
+            background-image: url(../resourses/icons8-круг.svg);
             width: 100px;
             height: 100px;
             position: absolute;  
@@ -170,7 +170,7 @@ nav {
     
         .one::before {
             content: "";
-            background-image: url(resourses/develop.svg);
+            background-image: url(../resourses/develop.svg);
             background-repeat: no-repeat;
             width: 35px;
             height: 35px;
@@ -180,7 +180,7 @@ nav {
     
         .h4__image_bef::before {
             content: "";
-            background-image: url(resourses/mob.svg);
+            background-image: url(../resourses/mob.svg);
             background-repeat: no-repeat;
             width: 35px;
             height: 35px;
@@ -189,7 +189,7 @@ nav {
         }
         .three::before {
             content: "";
-            background-image: url(resourses/consalting.svg);
+            background-image: url(../resourses/consalting.svg);
             background-repeat: no-repeat;
             width: 35px;
             height: 35px;
@@ -218,7 +218,7 @@ h3 {
 }
 .h3_wrapper::before {
     content: "";
-    background-image: url(resourses/icons8-круг.svg);
+    background-image: url(../resourses/icons8-круг.svg);
     width: 100px;
     height: 100px;
     position: absolute;  
@@ -256,7 +256,7 @@ h3 {
     }
     .h3_wrapper::before {
         content: "";
-        background-image: url(resourses/icons8-круг.svg);
+        background-image: url(../resourses/icons8-круг.svg);
         width: 100px;
         height: 100px;
         position: absolute;  
@@ -297,7 +297,7 @@ h3 {
         }
         .h4__image_bef::before {
             content: "";
-            background-image: url(resourses/diplom.svg);
+            background-image: url(../resourses/diplom.svg);
             background-repeat: no-repeat;
             background-size: cover;
             width: 75px;
@@ -308,7 +308,7 @@ h3 {
         }
 
         .h4__image_bef.hat::before {
-            background-image: url(resourses/hat.svg);
+            background-image: url(../resourses/hat.svg);
             background-repeat: no-repeat;
             background-size: cover;
             width: 75px;
@@ -354,7 +354,7 @@ h3 {
     }
     .h3_wrapper::before {
         content: "";
-        background-image: url(resourses/icons8-круг.svg);
+        background-image: url(../resourses/icons8-круг.svg);
         width: 100px;
         height: 100px;
         position: absolute;  
@@ -385,7 +385,7 @@ h3 {
 }
 .h3_wrapper::before {
     content: "";
-    background-image: url(resourses/icons8-круг.svg);
+    background-image: url(../resourses/icons8-круг.svg);
     width: 100px;
     height: 100px;
     position: absolute;  
