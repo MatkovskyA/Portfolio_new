@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mat_Kovsky</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="resourses/icon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +40,7 @@
     </header>
 
     <main>
-        <section class="content">
+        <section class="content" id="content">
             <div class="content__video_background">
                 <video autoplay muted loop class="myVideo">
                     <source src="resourses/lv_0_20230711184032.MP4" type="video/mp4">
@@ -56,7 +57,7 @@
                 </div>
             </div>
         </section>
-        <section class="about__me">
+        <section class="about__me" id="about__me">
             <div class="container">
                 <div class="present">
                     <div class="present__image">
@@ -170,7 +171,7 @@
                 </ul>
             </div>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
             <div class="container">
                 <div class="skills__title">
                     <div class="h3_wrapper">
@@ -253,7 +254,7 @@
                 </ul>
             </div>
         </section>
-        <section class="hobby">
+        <section class="hobby" id="hobby">
             <div class="container">
                 <div class="hobby__title">
                     <div class="h3_wrapper">
@@ -261,16 +262,74 @@
                     </div>
                     <h2>Что заряжает меня по мимо программирования</h2>
                 </div>
+                <!-- <div class="container__slider">
+                    <div class="slider__wrapper">
+                        <div class="slider__wrapper_slide">
+                            <div class="slide-swiper_image">
+                                <img src="resourses/family.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__wrapper_slide">
+                            <div class="slide-swiper_image">
+                                <img src="resourses/marathone.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__wrapper_slide">
+                            <div class="slide-swiper_image">
+                                <img src="resourses/family-run2.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__wrapper_slide">
+                            <div class="slide-swiper_image">
+                                <img src="resourses/elbrus.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__wrapper_slide">
+                            <div class="slide-swiper_image">
+                                <img src="resourses/swim.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__wrapper_slide">
+                            <div class="slide-swiper_image">
+                                <img src="resourses/swim2.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__wrapper_slide">
+                            <div class="slide-swiper_image">
+                                <img src="resourses/fly.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__wrapper_slide">
+                            <div class="slide-swiper_image">
+                                <img src="resourses/moto.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__wrapper_slide">
+                            <div class="slide-swiper_image">
+                                <img src="resourses/develop.JPG" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </section>
     </main>
 
     <footer>
-        <div> и более 10 лет я посвятил совсем не разработке, а общепиту и развитию в этой отрасли. Достиг значительных
-            высот - свое заведение, 11 кафе в управлении и немногим меньше 100 человек в команде. и 30 лет я был твердо
-            уверен, что IT(ай-ти) и разработка - это для избранных.
+        <div class="container">
+            <div class="footer__inner">
+                <nav>
+                    <a href="#about__me" class="footer__nav">Про меня</a>
+                    <a href="#projects" class="footer__nav">Про проекты</a>
+                    <a href="#skills" class="footer__nav">Про навыки</a>
+                    <a href="#" class="footer__nav">Контакты</a>
+                </nav>
+                <p class="footer__text">Mat_Kovsky - 2023</p>
+            </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -392,6 +392,48 @@ h3 {
     top: -35px;
 }
 }
+// footer ----------
+
+footer {
+    background-color: $color;
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 85px;
+    a:last-child {
+        margin-right: 0;
+    }
+}
+
+.footer__inner {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.footer__nav {
+    margin-right: 53px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+    cursor: pointer;
+
+    .footer__nav:hover {
+        opacity: 0.5;
+    }
+
+}
+
+.footer__text {
+    font-size: 20px;
+    opacity: 0.5;
+    text-align: center;
+    color: $white;
+}
+}
 
 
 

@@ -474,4 +474,38 @@ nav .logo {
   height: 100px;
   position: absolute;
   top: -35px;
+}
+
+footer {
+  background-color: rgba(44, 37, 37, 0.8);
+}
+footer nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 85px;
+}
+footer nav a:last-child {
+  margin-right: 0;
+}
+footer .footer__inner {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+footer .footer__nav {
+  margin-right: 53px;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+footer .footer__nav .footer__nav:hover {
+  opacity: 0.5;
+}
+footer .footer__text {
+  font-size: 20px;
+  opacity: 0.5;
+  text-align: center;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
