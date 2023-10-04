@@ -224,7 +224,7 @@ nav .logo {
 }
 .about__me .present .present__inner .h3_wrapper::before {
   content: "";
-  background-image: url(/resourses/icons8-круг.svg);
+  background-image: url(resourses/icons8-круг.svg);
   width: 100px;
   height: 100px;
   position: absolute;
@@ -264,7 +264,7 @@ nav .logo {
 }
 .about__me .present .competencies ul .one::before {
   content: "";
-  background-image: url(/resourses/develop.svg);
+  background-image: url(resourses/develop.svg);
   background-repeat: no-repeat;
   width: 35px;
   height: 35px;
@@ -273,7 +273,7 @@ nav .logo {
 }
 .about__me .present .competencies ul .h4__image_bef::before {
   content: "";
-  background-image: url(/resourses/mob.svg);
+  background-image: url(resourses/mob.svg);
   background-repeat: no-repeat;
   width: 35px;
   height: 35px;
@@ -282,7 +282,7 @@ nav .logo {
 }
 .about__me .present .competencies ul .three::before {
   content: "";
-  background-image: url(/resourses/consalting.svg);
+  background-image: url(resourses/consalting.svg);
   background-repeat: no-repeat;
   width: 35px;
   height: 35px;
@@ -309,7 +309,7 @@ nav .logo {
 }
 .my__projects .h3_wrapper::before {
   content: "";
-  background-image: url(/resourses/icons8-круг.svg);
+  background-image: url(resourses/icons8-круг.svg);
   width: 100px;
   height: 100px;
   position: absolute;
@@ -346,7 +346,7 @@ nav .logo {
 }
 .education .h3_wrapper::before {
   content: "";
-  background-image: url(/resourses/icons8-круг.svg);
+  background-image: url(resourses/icons8-круг.svg);
   width: 100px;
   height: 100px;
   position: absolute;
@@ -387,7 +387,7 @@ nav .logo {
 }
 .education .education__inner ul .h4__image_bef::before {
   content: "";
-  background-image: url(/resourses/diplom.svg);
+  background-image: url(resourses/diplom.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 75px;
@@ -397,7 +397,7 @@ nav .logo {
   top: -20px;
 }
 .education .education__inner ul .h4__image_bef.hat::before {
-  background-image: url(/resourses/hat.svg);
+  background-image: url(resourses/hat.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 75px;
@@ -438,7 +438,7 @@ nav .logo {
 }
 .skills .h3_wrapper::before {
   content: "";
-  background-image: url(/resourses/icons8-круг.svg);
+  background-image: url(resourses/icons8-круг.svg);
   width: 100px;
   height: 100px;
   position: absolute;
@@ -469,7 +469,7 @@ nav .logo {
 }
 .hobby .h3_wrapper::before {
   content: "";
-  background-image: url(/resourses/icons8-круг.svg);
+  background-image: url(resourses/icons8-круг.svg);
   width: 100px;
   height: 100px;
   position: absolute;
