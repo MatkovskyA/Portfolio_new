@@ -182,9 +182,9 @@ nav .logo {
 .content .content__desc {
   padding: 15px;
   max-width: 600px;
-  position: relative;
+  position: absolute;
   z-index: 2;
-  top: 400px;
+  bottom: 40px;
   color: #fff;
   background-color: rgba(121, 121, 121, 0.4);
   border-radius: 20px;
@@ -222,6 +222,9 @@ nav .logo {
 .about__me .present .present__inner .h3_wrapper {
   margin-bottom: 30px;
 }
+.about__me .present .present__inner .h3_wrapper h3 {
+  position: relative;
+}
 .about__me .present .present__inner .h3_wrapper::before {
   content: "";
   background-image: url(../resourses/icons8-круг.svg);
@@ -233,10 +236,6 @@ nav .logo {
 }
 .about__me .present .present__inner .h2_wrapper {
   margin-bottom: 50px;
-}
-.about__me .present .present__inner h3 {
-  position: relative;
-  z-index: 2;
 }
 .about__me .present .present__inner h2 {
   padding-bottom: 10px;
@@ -290,47 +289,6 @@ nav .logo {
   left: -10px;
 }
 
-.my__projects {
-  background: rgb(254, 224, 229);
-  padding-bottom: 100px;
-  padding-top: 50px;
-}
-.my__projects .projects__title {
-  text-align: center;
-  position: relative;
-  margin-bottom: 30px;
-}
-.my__projects h3 {
-  position: relative;
-  z-index: 2;
-}
-.my__projects .h3_wrapper {
-  margin-bottom: 30px;
-}
-.my__projects .h3_wrapper::before {
-  content: "";
-  background-image: url(../resourses/icons8-круг.svg);
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: -35px;
-}
-.my__projects .project {
-  position: relative;
-}
-.my__projects .project img {
-  border-radius: 30px;
-  box-shadow: 15px 15px 25px 15px #ccc;
-}
-.my__projects .project p {
-  position: absolute;
-  padding: 10px 25px;
-  bottom: 50px;
-  left: 50px;
-  background: rgb(255, 225, 0);
-  border-radius: 20px;
-}
-
 .education {
   display: flex;
 }
@@ -344,6 +302,10 @@ nav .logo {
 .education .h3_wrapper {
   margin-bottom: 30px;
 }
+.education .h3_wrapper h3 {
+  position: relative;
+  margin-left: 20px;
+}
 .education .h3_wrapper::before {
   content: "";
   background-image: url(../resourses/icons8-круг.svg);
@@ -351,14 +313,10 @@ nav .logo {
   height: 100px;
   position: absolute;
   top: -34px;
-  left: -35px;
+  left: -15px;
 }
 .education .h2_wrapper {
   margin-bottom: 50px;
-}
-.education h3 {
-  position: relative;
-  z-index: 2;
 }
 .education h2 {
   padding-bottom: 10px;
@@ -380,7 +338,6 @@ nav .logo {
   row-gap: 40px;
   padding-left: 35px;
   margin-right: 40px;
-  position: relative;
 }
 .education .education__inner ul li {
   width: calc(50% - 25px);
@@ -411,6 +368,49 @@ nav .logo {
   min-width: 400px;
 }
 
+.my__projects {
+  background: rgb(254, 224, 229);
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+.my__projects .projects__title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+.my__projects .h3_wrapper {
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+.my__projects .h3_wrapper h3 {
+  position: relative;
+}
+.my__projects .h3_wrapper::before {
+  content: "";
+  background-image: url(../resourses/icons8-круг.svg);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -35px;
+  right: -30px;
+}
+.my__projects .project {
+  position: relative;
+}
+.my__projects .project img {
+  border-radius: 30px;
+  box-shadow: 15px 15px 25px 15px #ccc;
+}
+.my__projects .project p {
+  position: absolute;
+  padding: 10px 25px;
+  bottom: 50px;
+  left: 50px;
+  background: rgb(255, 225, 0);
+  border-radius: 20px;
+}
+
 .skills ul {
   display: flex;
   flex-wrap: wrap;
@@ -432,6 +432,8 @@ nav .logo {
 }
 .skills .h3_wrapper {
   margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
 }
 .skills .h3_wrapper h3 {
   position: relative;
@@ -443,6 +445,7 @@ nav .logo {
   height: 100px;
   position: absolute;
   top: -35px;
+  left: -35px;
 }
 .skills .skills__block_img-weight {
   max-width: 100px;
@@ -463,6 +466,8 @@ nav .logo {
 }
 .hobby .h3_wrapper {
   margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
 }
 .hobby .h3_wrapper h3 {
   position: relative;
@@ -474,6 +479,7 @@ nav .logo {
   height: 100px;
   position: absolute;
   top: -35px;
+  left: -35px;
 }
 
 footer {

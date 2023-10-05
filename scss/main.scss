@@ -83,9 +83,9 @@ nav {
     .content__desc {
         padding: 15px;
         max-width: 600px;
-        position: relative;
+        position: absolute;
         z-index: 2;
-        top: 400px;
+        bottom: 40px;
         color: $white;
         background-color: rgba(121, 121, 121, 0.4);
         border-radius: 20px;
@@ -125,6 +125,11 @@ nav {
         position: relative;
         .h3_wrapper {
             margin-bottom: 30px;
+            // position: relative;
+            // display: inline-block;
+            h3 {
+                position: relative;
+            }
         }
         .h3_wrapper::before {
             content: "";
@@ -138,10 +143,7 @@ nav {
         .h2_wrapper {
             margin-bottom: 50px;
         }
-        h3 {
-            position: relative;
-            z-index: 2;
-        }
+        
         h2 {
             padding-bottom: 10px;
             border-bottom: 3px solid rgb(255, 225, 0);
@@ -199,47 +201,6 @@ nav {
     }
 }
 }
-//SECTION PROJECTS------------------------------------------------
-.my__projects {
-    background: $gridBackColor;
-    padding-bottom: 100px;
-    padding-top: 50px;
-.projects__title {
-    text-align: center;
-    position: relative;
-    margin-bottom: 30px;
-}
-h3 {
-    position: relative;
-    z-index: 2;
-}
-.h3_wrapper {
-    margin-bottom: 30px;
-}
-.h3_wrapper::before {
-    content: "";
-    background-image: url(../resourses/icons8-круг.svg);
-    width: 100px;
-    height: 100px;
-    position: absolute;  
-    top: -35px;
-}
-.project {
-    position: relative;
-    img {
-        border-radius: 30px;
-        box-shadow: 15px 15px 25px 15px #ccc;
-    }
-    p {
-        position: absolute;
-        padding: 10px 25px;
-        bottom: 50px;
-        left: 50px;
-        background: rgb(255, 225, 0);
-        border-radius: 20px;
-    }
-}
-}
 //SECTION EDUCATION------------------------------------------------
 .education {
     display: flex;
@@ -253,6 +214,10 @@ h3 {
     }
     .h3_wrapper {
         margin-bottom: 30px;
+        h3 {
+            position: relative;
+            margin-left: 20px;
+        }
     }
     .h3_wrapper::before {
         content: "";
@@ -261,14 +226,10 @@ h3 {
         height: 100px;
         position: absolute;  
         top: -34px;
-        left: -35px;
+        left: -15px;
     }
     .h2_wrapper {
         margin-bottom: 50px;
-    }
-    h3 {
-        position: relative;
-        z-index: 2;
     }
     h2 {
         padding-bottom: 10px;
@@ -278,7 +239,6 @@ h3 {
     }
     .p_wrapper {
         margin-bottom: 50px;
-
         p {
             padding-right: 50px;
         }
@@ -290,7 +250,6 @@ h3 {
         row-gap: 40px;
         padding-left: 35px;
         margin-right: 40px;
-        position: relative;
     
         li {
             width: calc(50% - 25px);
@@ -323,6 +282,51 @@ h3 {
         min-width: 400px;
     }
 }
+
+//SECTION PROJECTS------------------------------------------------
+.my__projects {
+    background: $gridBackColor;
+    padding-bottom: 100px;
+    padding-top: 50px;
+.projects__title {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+.h3_wrapper {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    h3 {
+        position: relative;
+    }
+}
+.h3_wrapper::before {
+    content: "";
+    background-image: url(../resourses/icons8-круг.svg);
+    width: 100px;
+    height: 100px;
+    position: absolute;  
+    top: -35px;
+    right: -30px;
+}
+.project {
+    position: relative;
+    img {
+        border-radius: 30px;
+        box-shadow: 15px 15px 25px 15px #ccc;
+    }
+    p {
+        position: absolute;
+        padding: 10px 25px;
+        bottom: 50px;
+        left: 50px;
+        background: rgb(255, 225, 0);
+        border-radius: 20px;
+    }
+}
+}
+
 // section SKILLS------------------------------------------------
 .skills {
     ul {
@@ -345,9 +349,10 @@ h3 {
         position: relative;
         margin-bottom: 70px;
     }
-    
     .h3_wrapper {
         margin-bottom: 30px;
+        position: relative;
+        display: inline-block;
         h3 {
             position: relative;
         }
@@ -359,6 +364,7 @@ h3 {
         height: 100px;
         position: absolute;  
         top: -35px;
+        left: -35px;
     }
     .skills__block_img-weight {
         max-width: 100px;
@@ -367,7 +373,7 @@ h3 {
         padding-top: 25px;
     }
 }
-
+//hobby --------------------------------------------
 .hobby {
     background: $gridBackColor;
     padding-bottom: 100px;
@@ -379,6 +385,8 @@ h3 {
 }
 .h3_wrapper {
     margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
     h3 {
         position: relative;
     }
@@ -390,6 +398,7 @@ h3 {
     height: 100px;
     position: absolute;  
     top: -35px;
+    left: -35px;
 }
 }
 // footer ----------
@@ -435,5 +444,164 @@ nav {
 }
 }
 
+//galery ---
+// .gallery__slide {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 100%;
+//     opacity: 0;
+//     transition: all 1s ease-in-out;
+// }
 
+// .slide__image {
+//     width: 100%;
+// }
+
+// .gallery__slide_active {
+//     opacity: 1;
+// }
+
+// .slide__image {
+//     width: 100%;
+//     height: 717px;
+//     object-fit: cover;
+// }
+
+// .gallery__slide-title {
+//     position: absolute;
+//     bottom: 60px;
+//     left: 0;
+//     width: 100%;
+
+// }
+
+// .gallery__controls-wrapper {
+//     position: absolute;
+//     bottom: 162px;
+//     left: -3px;
+//     width: 100%;
+//     z-index: 2;
+// }
+
+// .gallery__text {
+//     max-width: 443px;
+//     font-size: 30px;
+//     line-height: 41px;
+//     color: #FFFFFF;
+// }
+
+//   .gallery__controls {
+//     display: flex;
+// }
+
+//   .gallery__control-prev, .gallery__control-next {
+//     width: 40px;
+//     height: 40px;
+//     border: none;
+//     background: url(../resources/ic_back.png), left center/auto no-repeat;
+//     background-repeat: no-repeat;
+//   }
+
+//   .gallery__control-prev:hover, .gallery__control-next:hover {
+//     opacity: 0.5;
+//   }
+//   .gallery__control-next {
+//     transform: rotate(180deg);
+//   }
+
+
+// @media (max-width: 1199px) {
+
+//     .gallery {
+//         margin-bottom: 121px;
+//         height: 536px;
+//     }
+
+//     .gallery__title-wrapper {
+//         top: 80px;
+//         left: 34px;
+//         width: calc(100% - 50px + 15px);
+//       }
+
+//       .gallery__title {
+//         font-size: 20px;
+//         line-height: 27px;
+//       }
+
+//       .slide__image {
+//         width: 100%;
+//         height: 536px;
+//     }
+
+//       .gallery__controls-wrapper {
+//         bottom: 152px;
+//         left: 35px;
+//         width: calc(100% - 50px + 15px);
+//       }
+
+//       .gallery__slide-title {
+//         bottom: 80px;
+//         left: 35px;
+//         width: calc(100% - 50px + 15px);
+//       }
+
+//       .gallery__text {
+//         width: 100%;
+//         font-size: 25px;
+//         line-height: 34px;
+//       }
+// }
+
+// @media (max-width: 767px) {
+
+//     .gallery {
+//         margin-bottom: 79px;
+//         height: 408px;
+//       }
+
+//       .gallery__title-wrapper {
+//         top: 61px;
+//         left: 0;
+//         width: 100%;
+//       }
+
+//       .gallery__title {
+//         font-size: 14px;
+//         line-height: 19px;
+//       }
+
+//       .slide__image {
+//         width: 100%;
+//         height: 408px;
+//     }
+//       .gallery__controls-wrapper {
+//         bottom: calc(50% - 15px);
+//         left: 0;
+//         width: 100%;
+//       }
+
+//       .gallery__controls {
+//         justify-content: space-between;
+//       }
+
+//       .gallery__control-prev, .gallery__control-next {
+//         width: 30px;
+//         height: 30px;
+//         background-size: auto 25px;
+//       }
+
+//       .gallery__slide-title {
+//         bottom: 60px;
+//         left: 0;
+//         width: 100%;
+//       }
+
+//       .gallery__text {
+//         max-width: 287px;
+//         font-size: 19px;
+//         line-height: 26px;
+//       }
+// }
 
