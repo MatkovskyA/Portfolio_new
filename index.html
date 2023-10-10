@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mat_Kovsky</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="resourses/icon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,7 +77,7 @@
                                     </div>
                                     <p>С 2022 года я занимаюсь разработкой сайтов с нуля, доработкой действующих
                                         проектов и их поддержкой. <br>Создаю привлекательные сайты, которые помогают
-                                        Вашему бизнесу
+                                        вашему бизнесу
                                     </p>
                                 </li>
                                 <li class="two">
@@ -253,15 +252,98 @@
                 </ul>
             </div>
         </section>
+        <section class="form">
+            <div class="container">
+                <div class="form__title">
+                    <div class="h3_wrapper">
+                        <h3>Связаться со мной</h3>
+                    </div>
+                    <h2>Достаточно заполнить и отправить форму ниже ⬇️</h2>
+                </div>
+                <div class="form__wrapper">
+                    <form action="">
+                        <div>
+                            <label for="userName">Ваше имя:</label>
+                            <input id="userName" type="text" placeholder="Введите имя" required>
+                        </div>
+                        <div>
+                            <label for="userEmail">Ваша почта:</label>
+                            <input id="userEmail" type="email" placeholder="Введите ваш email" required>
+                        </div>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Введите ваш вопрос"></textarea>
+                        <!-- <div>
+                            <label for="userName">Что необходимо сделать:</label>
+                            <input id="userName" type="textarea" placeholder="Введите имя">
+                        </div>
+                        <div>
+                            <label for="userName">Ваше имя:</label>
+                            <input id="userName" type="checkbox" placeholder="Введите имя">
+                        </div>
+                        <div>
+                            <label for="userName">Ваше имя:</label>
+                            <input id="userName" type="checkbox" placeholder="Введите имя">
+                        </div> -->
+                        <div>
+                            <input type="submit">
+                        </div>
+
+
+
+                    </form>
+                </div>
+            </div>
+            </div>
+        </section>
         <section class="hobby" id="hobby">
             <div class="container">
-                <div class="hobby__title">
-                    <div class="h3_wrapper">
-                        <h3>Про хобби и увлечения</h3>
-                    </div>
-                    <h2>Что заряжает меня по мимо программирования</h2>
+                <div class="h3_wrapper">
+                    <h3>Про хобби и увлечения</h3>
                 </div>
+                <h2>Что заряжает меня по мимо программирования</h2>
 
+                <!--Slider-->
+                <div class="gallery__controls-wrapper">
+                    <div class="container">
+                        <div class="gallery__controls">
+                            <button class="gallery__control-prev"></button>
+                            <button class="gallery__control-next"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__slides">
+                    <div class="gallery__slide gallery__slide_active">
+                        <img class="slide__image" src="resourses/family-run2.jpeg" alt="Семья" />
+                        <div class="gallery__slide-title">
+                            <div class="container">
+                                <p class="gallery__text">Семья</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery__slide">
+                        <img class="slide__image" src="resourses/run.jpg" alt="Бег" />
+                        <div class="gallery__slide-title">
+                            <div class="container">
+                                <p class="gallery__text">бег</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery__slide">
+                        <img class="slide__image" src="resourses/marathone.jpeg" alt="marathone" />
+                        <div class="gallery__slide-title">
+                            <div class="container">
+                                <p class="gallery__text">Марафон</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery__slide">
+                        <img class="slide__image" src="resourses/fly.jpg" alt="Fly" />
+                        <div class="gallery__slide-title">
+                            <div class="container">
+                                <p class="gallery__text">Fly</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -280,7 +362,6 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 

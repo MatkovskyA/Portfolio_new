@@ -373,6 +373,31 @@ nav {
         padding-top: 25px;
     }
 }
+
+// form -------------------------------------------
+.form__title {
+    text-align: center;
+    position: relative;
+    margin-bottom: 70px;
+}
+.h3_wrapper {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    h3 {
+        position: relative;
+    }
+}
+.h3_wrapper::before {
+    content: "";
+    background-image: url(../resourses/icons8-круг.svg);
+    width: 100px;
+    height: 100px;
+    position: absolute;  
+    top: -35px;
+    left: -35px;
+}
+
 //hobby --------------------------------------------
 .hobby {
     background: $gridBackColor;
@@ -400,6 +425,14 @@ nav {
     top: -35px;
     left: -35px;
 }
+}
+
+.family {
+    display: flex;
+    img {
+        max-width: 300px;
+        margin-right: 30px;
+    }
 }
 // footer ----------
 
@@ -444,164 +477,76 @@ nav {
 }
 }
 
-//galery ---
-// .gallery__slide {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     height: 100%;
-//     width: 100%;
-//     opacity: 0;
-//     transition: all 1s ease-in-out;
-// }
-
-// .slide__image {
-//     width: 100%;
-// }
-
-// .gallery__slide_active {
-//     opacity: 1;
-// }
-
-// .slide__image {
-//     width: 100%;
-//     height: 717px;
-//     object-fit: cover;
-// }
-
-// .gallery__slide-title {
-//     position: absolute;
-//     bottom: 60px;
-//     left: 0;
-//     width: 100%;
-
-// }
-
-// .gallery__controls-wrapper {
-//     position: absolute;
-//     bottom: 162px;
-//     left: -3px;
-//     width: 100%;
-//     z-index: 2;
-// }
-
-// .gallery__text {
-//     max-width: 443px;
-//     font-size: 30px;
-//     line-height: 41px;
-//     color: #FFFFFF;
-// }
-
-//   .gallery__controls {
-//     display: flex;
-// }
-
-//   .gallery__control-prev, .gallery__control-next {
-//     width: 40px;
-//     height: 40px;
-//     border: none;
-//     background: url(../resources/ic_back.png), left center/auto no-repeat;
-//     background-repeat: no-repeat;
-//   }
-
-//   .gallery__control-prev:hover, .gallery__control-next:hover {
-//     opacity: 0.5;
-//   }
-//   .gallery__control-next {
-//     transform: rotate(180deg);
-//   }
+// slider
+.hobby   {
+    position: relative;
+    width: 100%;
+    height: 717px;
+}
 
 
-// @media (max-width: 1199px) {
+.gallery__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
 
-//     .gallery {
-//         margin-bottom: 121px;
-//         height: 536px;
-//     }
+.slide__image {
+    width: 100%;
+}
 
-//     .gallery__title-wrapper {
-//         top: 80px;
-//         left: 34px;
-//         width: calc(100% - 50px + 15px);
-//       }
+.gallery__slide_active {
+    opacity: 1;
+}
 
-//       .gallery__title {
-//         font-size: 20px;
-//         line-height: 27px;
-//       }
+.slide__image {
+    width: 100%;
+    height: 717px;
+    object-fit: cover;
+}
 
-//       .slide__image {
-//         width: 100%;
-//         height: 536px;
-//     }
+.gallery__slide-title {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
 
-//       .gallery__controls-wrapper {
-//         bottom: 152px;
-//         left: 35px;
-//         width: calc(100% - 50px + 15px);
-//       }
+}
 
-//       .gallery__slide-title {
-//         bottom: 80px;
-//         left: 35px;
-//         width: calc(100% - 50px + 15px);
-//       }
+.gallery__controls-wrapper {
+    position: absolute;
+    bottom: 162px;
+    left: -3px;
+    width: 100%;
+    z-index: 2;
+}
 
-//       .gallery__text {
-//         width: 100%;
-//         font-size: 25px;
-//         line-height: 34px;
-//       }
-// }
+.gallery__text {
+    max-width: 443px;
+    font-size: 30px;
+    line-height: 41px;
+    color: #FFFFFF;
+}
 
-// @media (max-width: 767px) {
+  .gallery__controls {
+    display: flex;
+}
 
-//     .gallery {
-//         margin-bottom: 79px;
-//         height: 408px;
-//       }
+  .gallery__control-prev, .gallery__control-next {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: url(../resourses/ic_back.png), left center/auto no-repeat;
+    background-repeat: no-repeat;
+  }
 
-//       .gallery__title-wrapper {
-//         top: 61px;
-//         left: 0;
-//         width: 100%;
-//       }
-
-//       .gallery__title {
-//         font-size: 14px;
-//         line-height: 19px;
-//       }
-
-//       .slide__image {
-//         width: 100%;
-//         height: 408px;
-//     }
-//       .gallery__controls-wrapper {
-//         bottom: calc(50% - 15px);
-//         left: 0;
-//         width: 100%;
-//       }
-
-//       .gallery__controls {
-//         justify-content: space-between;
-//       }
-
-//       .gallery__control-prev, .gallery__control-next {
-//         width: 30px;
-//         height: 30px;
-//         background-size: auto 25px;
-//       }
-
-//       .gallery__slide-title {
-//         bottom: 60px;
-//         left: 0;
-//         width: 100%;
-//       }
-
-//       .gallery__text {
-//         max-width: 287px;
-//         font-size: 19px;
-//         line-height: 26px;
-//       }
-// }
-
+  .gallery__control-prev:hover, .gallery__control-next:hover {
+    opacity: 0.5;
+  }
+  .gallery__control-next {
+    transform: rotate(180deg);
+  }
