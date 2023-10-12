@@ -46,6 +46,7 @@ h2 {
 
 h3 {
   font-size: 26px;
+  position: relative;
 }
 
 .h3_wrapper {
@@ -133,6 +134,24 @@ label {
   left: -35px;
 }
 
+.about__me .present .competencies ul .h4__image_bef::before, .about__me .present .competencies ul .h4__image_bef1::before {
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -40px;
+}
+
+.education .education__inner ul .h4__image_bef.hat::before, .education .education__inner ul .h4__image_bef::before {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  left: -60px;
+  top: -20px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -212,7 +231,7 @@ nav .logo {
 }
 .content .content__desc {
   padding: 15px;
-  max-width: 500px;
+  max-width: 600px;
   position: absolute;
   z-index: 2;
   bottom: 40px;
@@ -253,9 +272,6 @@ nav .logo {
 .about__me .present .present__inner .h3_wrapper {
   margin-bottom: 30px;
 }
-.about__me .present .present__inner .h3_wrapper h3 {
-  position: relative;
-}
 .about__me .present .present__inner .h2_wrapper {
   margin-bottom: 50px;
 }
@@ -283,32 +299,13 @@ nav .logo {
 .about__me .present .competencies ul li {
   width: calc(50% - 25px);
 }
-.about__me .present .competencies ul .one::before {
+.about__me .present .competencies ul .h4__image_bef1::before {
   content: "";
   background-image: url(../resourses/develop.svg);
-  background-repeat: no-repeat;
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  left: -10px;
 }
 .about__me .present .competencies ul .h4__image_bef::before {
   content: "";
   background-image: url(../resourses/mob.svg);
-  background-repeat: no-repeat;
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  left: -40px;
-}
-.about__me .present .competencies ul .three::before {
-  content: "";
-  background-image: url(../resourses/consalting.svg);
-  background-repeat: no-repeat;
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  left: -10px;
 }
 
 .education {
@@ -325,7 +322,6 @@ nav .logo {
   margin-bottom: 30px;
 }
 .education .h3_wrapper h3 {
-  position: relative;
   margin-left: 20px;
 }
 .education .h3_wrapper::before {
@@ -361,23 +357,9 @@ nav .logo {
 .education .education__inner ul .h4__image_bef::before {
   content: "";
   background-image: url(../resourses/diplom.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  position: absolute;
-  left: -60px;
-  top: -20px;
 }
 .education .education__inner ul .h4__image_bef.hat::before {
   background-image: url(../resourses/hat.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 75px;
-  height: 75px;
-  position: absolute;
-  left: -60px;
-  top: -20px;
 }
 .education .present__image {
   max-width: 500px;
@@ -393,9 +375,6 @@ nav .logo {
   text-align: center;
   position: relative;
   margin-bottom: 30px;
-}
-.my__projects .h3_wrapper h3 {
-  position: relative;
 }
 .my__projects .project {
   position: relative;
@@ -431,9 +410,6 @@ nav .logo {
   text-align: center;
   position: relative;
   margin-bottom: 70px;
-}
-.skills .h3_wrapper h3 {
-  position: relative;
 }
 .skills .skills__block_img-weight {
   max-width: 100px;
@@ -478,10 +454,6 @@ form textarea {
   margin-bottom: 70px;
 }
 
-.h3_wrapper h3 {
-  position: relative;
-}
-
 .form__img img {
   margin-top: 20%;
 }
@@ -500,9 +472,6 @@ form textarea {
   margin-bottom: 30px;
   position: relative;
   display: inline-block;
-}
-.hobby .h3_wrapper h3 {
-  position: relative;
 }
 .family {
   display: flex;

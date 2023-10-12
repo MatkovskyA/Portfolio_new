@@ -7,3 +7,21 @@
     top: -35px;
     left: -35px;
 }
+
+%extend-competencions-image-before {
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    position: absolute;  
+    left: -40px;
+}
+
+%extend-h4-image-bef {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75px;
+    height: 75px;
+    position: absolute;  
+    left: -60px;
+    top: -20px;
+}

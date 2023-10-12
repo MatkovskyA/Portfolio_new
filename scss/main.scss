@@ -84,7 +84,7 @@ nav {
 
     .content__desc {
         padding: 15px;
-        max-width: 500px;
+        max-width: 600px;
         position: absolute;
         z-index: 2;
         bottom: 40px;
@@ -127,9 +127,6 @@ nav {
         position: relative;
         .h3_wrapper {
             margin-bottom: 30px;
-            h3 {
-                position: relative;
-            }
         }
         .h3_wrapper::before {
             @extend %extend-h3-wrapper-before;
@@ -164,33 +161,16 @@ nav {
             width: calc(50% - 25px);
         }
     
-        .one::before {
+        .h4__image_bef1::before {
             content: "";
             background-image: url(../resourses/develop.svg);
-            background-repeat: no-repeat;
-            width: 35px;
-            height: 35px;
-            position: absolute;  
-            left: -10px;
+            @extend %extend-competencions-image-before;
         }
     
         .h4__image_bef::before {
             content: "";
             background-image: url(../resourses/mob.svg);
-            background-repeat: no-repeat;
-            width: 35px;
-            height: 35px;
-            position: absolute;  
-            left: -40px;
-        }
-        .three::before {
-            content: "";
-            background-image: url(../resourses/consalting.svg);
-            background-repeat: no-repeat;
-            width: 35px;
-            height: 35px;
-            position: absolute;  
-            left: -10px;
+            @extend %extend-competencions-image-before;
         }
     }
 }
@@ -209,7 +189,6 @@ nav {
     .h3_wrapper {
         margin-bottom: 30px;
         h3 {
-            position: relative;
             margin-left: 20px;
         }
     }
@@ -246,24 +225,12 @@ nav {
         .h4__image_bef::before {
             content: "";
             background-image: url(../resourses/diplom.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 75px;
-            height: 75px;
-            position: absolute;  
-            left: -60px;
-            top: -20px;
+            @extend %extend-h4-image-bef;
         }
 
         .h4__image_bef.hat::before {
             background-image: url(../resourses/hat.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 75px;
-            height: 75px;
-            position: absolute;  
-            left: -60px;
-            top: -20px;
+            @extend %extend-h4-image-bef;
         }
     }
     .present__image {
@@ -281,11 +248,6 @@ nav {
     text-align: center;
     position: relative;
     margin-bottom: 30px;
-}
-.h3_wrapper {
-    h3 {
-        position: relative;
-    }
 }
 .h3_wrapper::before {
     @extend %extend-h3-wrapper-before;
@@ -328,11 +290,6 @@ nav {
         text-align: center;
         position: relative;
         margin-bottom: 70px;
-    }
-    .h3_wrapper {
-        h3 {
-            position: relative;
-        }
     }
     .h3_wrapper::before {
         @extend %extend-h3-wrapper-before;
@@ -380,11 +337,6 @@ form {
     position: relative;
     margin-bottom: 70px;
 }
-.h3_wrapper {
-    h3 {
-        position: relative;
-    }
-}
 .h3_wrapper::before {
     @extend %extend-h3-wrapper-before;
 }
@@ -406,9 +358,6 @@ form {
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
-    h3 {
-        position: relative;
-    }
 }
 .h3_wrapper::before {
     @extend %extend-h3-wrapper-before;
