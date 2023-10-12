@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 * {
   padding: 0px;
   margin: 0px;
@@ -19,9 +18,7 @@
 }
 
 /* Links */
-a,
-a:link,
-a:visited {
+a, a:link, a:visited {
   text-decoration: none;
   cursor: pointer;
 }
@@ -32,12 +29,7 @@ a:hover {
 }
 
 /* Common */
-aside,
-nav,
-footer,
-header,
-section,
-main {
+aside, nav, footer, header, section, main {
   display: block;
 }
 
@@ -56,6 +48,12 @@ h3 {
   font-size: 26px;
 }
 
+.h3_wrapper {
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
 h4 {
   font-size: 20px;
 }
@@ -68,8 +66,7 @@ p {
   line-height: normal;
 }
 
-ul,
-ul li {
+ul, ul li {
   list-style: none;
 }
 
@@ -77,29 +74,38 @@ img {
   vertical-align: top;
 }
 
-img,
-svg {
+img, svg {
   max-width: 100%;
   height: auto;
 }
 
 /* Form */
-input,
-textarea,
-button,
-select {
+input, textarea, button, select {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   background-color: transparent;
+  border-bottom: 2px solid silver;
+}
+
+input[type=file] {
+  border-bottom: none;
+}
+
+textarea, input[type=submit] {
+  border: 2px solid silver;
+  border-radius: 5px;
+}
+
+input[type=submit] {
+  padding: 5px 15px;
 }
 
 input::-ms-clear {
   display: none;
 }
 
-button,
-input[type=submit] {
+button, input[type=submit] {
   display: inline-block;
   box-shadow: none;
   background-color: transparent;
@@ -107,15 +113,24 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input:focus,
-input:active,
-button:focus,
-button:active {
+input:focus, input:active,
+button:focus, button:active,
+textarea:focus {
   outline: none;
 }
 
 label {
   cursor: pointer;
+}
+
+.hobby .h3_wrapper::before, .h3_wrapper::before, .skills .h3_wrapper::before, .my__projects .h3_wrapper::before, .education .h3_wrapper::before, .about__me .present .present__inner .h3_wrapper::before {
+  content: "";
+  background-image: url(../resourses/icons8-круг.svg);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -35px;
+  left: -35px;
 }
 
 html {
@@ -147,25 +162,21 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-
 nav .nav_items {
   background: #fff;
   padding: 10px;
   border-radius: 20px;
 }
-
 nav .nav_items ul {
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: space-around;
 }
-
 nav .nav_items ul li {
   margin: 10px;
   text-align: center;
 }
-
 nav .logo {
   border-radius: 30px;
 }
@@ -181,7 +192,6 @@ nav .logo {
   min-height: 100vh;
   width: 100%;
 }
-
 .content .content__video_background {
   position: absolute;
   left: 0;
@@ -192,7 +202,6 @@ nav .logo {
   height: 100%;
   overflow: hidden;
 }
-
 .content .content__video_background .myVideo {
   position: absolute;
   left: 50%;
@@ -201,10 +210,9 @@ nav .logo {
   min-width: 100%;
   min-height: 100%;
 }
-
 .content .content__desc {
   padding: 15px;
-  max-width: 600px;
+  max-width: 500px;
   position: absolute;
   z-index: 2;
   bottom: 40px;
@@ -212,16 +220,12 @@ nav .logo {
   background-color: rgba(121, 121, 121, 0.4);
   border-radius: 20px;
 }
-
-.content h3,
-.content h1 {
+.content h3, .content h1 {
   margin-bottom: 30px;
 }
-
 .content .content__info {
   margin-bottom: 30px;
 }
-
 .content .content__info a {
   background-color: rgb(255, 225, 0);
   padding: 10px 20px;
@@ -233,74 +237,52 @@ nav .logo {
 .about__me {
   background: rgb(254, 224, 229);
 }
-
 .about__me .present {
   padding: 50px 0px;
   display: flex;
   gap: 50px;
 }
-
 .about__me .present .present__image {
   max-width: 500px;
   min-width: 400px;
 }
-
 .about__me .present .present__inner {
   margin-top: 40px;
   position: relative;
 }
-
 .about__me .present .present__inner .h3_wrapper {
   margin-bottom: 30px;
 }
-
 .about__me .present .present__inner .h3_wrapper h3 {
   position: relative;
 }
-
-.about__me .present .present__inner .h3_wrapper::before {
-  content: "";
-  background-image: url(../resourses/icons8-круг.svg);
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: -34px;
-  left: -35px;
-}
-
 .about__me .present .present__inner .h2_wrapper {
   margin-bottom: 50px;
 }
-
 .about__me .present .present__inner h2 {
   padding-bottom: 10px;
   border-bottom: 3px solid rgb(255, 225, 0);
   border-bottom-right-radius: 10px;
   display: inline;
 }
-
 .about__me .present .present__inner .p_wrapper {
   margin-bottom: 50px;
 }
-
 .about__me .present .present__inner .p_wrapper p {
   padding-right: 50px;
 }
-
 .about__me .present .competencies ul {
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 50px;
-  column-gap: 50px;
+       column-gap: 50px;
   row-gap: 40px;
   padding-left: 35px;
   position: relative;
 }
-
 .about__me .present .competencies ul li {
   width: calc(50% - 25px);
 }
-
 .about__me .present .competencies ul .one::before {
   content: "";
   background-image: url(../resourses/develop.svg);
@@ -310,7 +292,6 @@ nav .logo {
   position: absolute;
   left: -10px;
 }
-
 .about__me .present .competencies ul .h4__image_bef::before {
   content: "";
   background-image: url(../resourses/mob.svg);
@@ -320,7 +301,6 @@ nav .logo {
   position: absolute;
   left: -40px;
 }
-
 .about__me .present .competencies ul .three::before {
   content: "";
   background-image: url(../resourses/consalting.svg);
@@ -334,68 +314,50 @@ nav .logo {
 .education {
   display: flex;
 }
-
 .education .education__inner {
   margin-top: 40px;
   position: relative;
 }
-
 .education .education__inner h2 {
   padding-bottom: 0;
 }
-
 .education .h3_wrapper {
   margin-bottom: 30px;
 }
-
 .education .h3_wrapper h3 {
   position: relative;
   margin-left: 20px;
 }
-
 .education .h3_wrapper::before {
-  content: "";
-  background-image: url(../resourses/icons8-круг.svg);
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: -34px;
   left: -15px;
 }
-
 .education .h2_wrapper {
   margin-bottom: 50px;
 }
-
 .education h2 {
   padding-bottom: 10px;
   border-bottom: 3px solid rgb(255, 225, 0);
   border-bottom-right-radius: 10px;
   display: inline;
 }
-
 .education .p_wrapper {
   margin-bottom: 50px;
 }
-
 .education .p_wrapper p {
   padding-right: 50px;
 }
-
 .education .education__inner ul {
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 50px;
-  column-gap: 50px;
+       column-gap: 50px;
   row-gap: 40px;
   padding-left: 35px;
   margin-right: 40px;
 }
-
 .education .education__inner ul li {
   width: calc(50% - 25px);
 }
-
 .education .education__inner ul .h4__image_bef::before {
   content: "";
   background-image: url(../resourses/diplom.svg);
@@ -407,7 +369,6 @@ nav .logo {
   left: -60px;
   top: -20px;
 }
-
 .education .education__inner ul .h4__image_bef.hat::before {
   background-image: url(../resourses/hat.svg);
   background-repeat: no-repeat;
@@ -418,7 +379,6 @@ nav .logo {
   left: -60px;
   top: -20px;
 }
-
 .education .present__image {
   max-width: 500px;
   min-width: 400px;
@@ -429,42 +389,21 @@ nav .logo {
   padding-bottom: 100px;
   padding-top: 50px;
 }
-
 .my__projects .projects__title {
   text-align: center;
   position: relative;
   margin-bottom: 30px;
 }
-
-.my__projects .h3_wrapper {
-  margin-bottom: 30px;
-  position: relative;
-  display: inline-block;
-}
-
 .my__projects .h3_wrapper h3 {
   position: relative;
 }
-
-.my__projects .h3_wrapper::before {
-  content: "";
-  background-image: url(../resourses/icons8-круг.svg);
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: -35px;
-  right: -30px;
-}
-
 .my__projects .project {
   position: relative;
 }
-
 .my__projects .project img {
   border-radius: 30px;
   box-shadow: 15px 15px 25px 15px #ccc;
 }
-
 .my__projects .project p {
   position: absolute;
   padding: 10px 25px;
@@ -481,48 +420,70 @@ nav .logo {
   row-gap: 40px;
   text-align: center;
 }
-
 .skills li {
   height: 250px;
   max-width: 300px;
 }
-
 .skills li img {
   padding-bottom: 20px;
 }
-
 .skills .skills__title {
   text-align: center;
   position: relative;
   margin-bottom: 70px;
 }
-
-.skills .h3_wrapper {
-  margin-bottom: 30px;
-  position: relative;
-  display: inline-block;
-}
-
 .skills .h3_wrapper h3 {
   position: relative;
 }
-
-.skills .h3_wrapper::before {
-  content: "";
-  background-image: url(../resourses/icons8-круг.svg);
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: -35px;
-  left: -35px;
-}
-
 .skills .skills__block_img-weight {
   max-width: 100px;
 }
-
 .skills .jQuery {
   padding-top: 25px;
+}
+
+form {
+  min-width: 320px;
+  font-size: 20px;
+  line-height: 28px;
+  border: 2px solid yellow;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+}
+form div {
+  padding-bottom: 10px;
+}
+form input[type=submit] {
+  background-color: rgb(255, 225, 0);
+}
+form textarea {
+  resize: none;
+  width: 100%;
+  min-height: 120px;
+}
+
+.form {
+  padding: 50px 0;
+  background: rgb(254, 224, 229);
+}
+.form .form__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form__title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.h3_wrapper h3 {
+  position: relative;
+}
+
+.form__img img {
+  margin-top: 20%;
 }
 
 .hobby {
@@ -530,37 +491,22 @@ nav .logo {
   padding-bottom: 100px;
   padding-top: 50px;
 }
-
 .hobby .hobby__title {
   text-align: center;
   position: relative;
   margin-bottom: 30px;
 }
-
 .hobby .h3_wrapper {
   margin-bottom: 30px;
   position: relative;
   display: inline-block;
 }
-
 .hobby .h3_wrapper h3 {
   position: relative;
 }
-
-.hobby .h3_wrapper::before {
-  content: "";
-  background-image: url(../resourses/icons8-круг.svg);
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: -35px;
-  left: -35px;
-}
-
 .family {
   display: flex;
 }
-
 .family img {
   max-width: 300px;
   margin-right: 30px;
@@ -569,22 +515,18 @@ nav .logo {
 footer {
   background-color: rgba(44, 37, 37, 0.8);
 }
-
 footer nav {
   display: flex;
   justify-content: center;
   margin-bottom: 85px;
 }
-
 footer nav a:last-child {
   margin-right: 0;
 }
-
 footer .footer__inner {
   padding-top: 60px;
   padding-bottom: 30px;
 }
-
 footer .footer__nav {
   margin-right: 53px;
   font-size: 18px;
@@ -594,11 +536,9 @@ footer .footer__nav {
   color: #fff;
   cursor: pointer;
 }
-
 footer .footer__nav .footer__nav:hover {
   opacity: 0.5;
 }
-
 footer .footer__text {
   font-size: 20px;
   opacity: 0.5;
@@ -611,8 +551,7 @@ footer .footer__text {
   width: 100%;
   height: 717px;
 }
-
-.gallery__slide {
+.hobby .gallery__slide {
   position: absolute;
   top: 0;
   left: 0;
@@ -621,63 +560,50 @@ footer .footer__text {
   opacity: 0;
   transition: all 1s ease-in-out;
 }
-
-.slide__image {
+.hobby .slide__image {
   width: 100%;
 }
-
-.gallery__slide_active {
+.hobby .gallery__slide_active {
   opacity: 1;
 }
-
-.slide__image {
+.hobby .slide__image {
   width: 100%;
   height: 717px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-.gallery__slide-title {
+.hobby .gallery__slide-title {
   position: absolute;
   bottom: 60px;
   left: 0;
   width: 100%;
 }
-
-.gallery__controls-wrapper {
+.hobby .gallery__controls-wrapper {
   position: absolute;
   bottom: 162px;
   left: -3px;
   width: 100%;
   z-index: 2;
 }
-
-.gallery__text {
+.hobby .gallery__text {
   max-width: 443px;
   font-size: 30px;
   line-height: 41px;
   color: #FFFFFF;
 }
-
-.gallery__controls {
+.hobby .gallery__controls {
   display: flex;
 }
-
-.gallery__control-prev,
-.gallery__control-next {
+.hobby .gallery__control-prev, .hobby .gallery__control-next {
   width: 40px;
   height: 40px;
   border: none;
   background: url(../resourses/ic_back.png), left center/auto no-repeat;
   background-repeat: no-repeat;
 }
-
-.gallery__control-prev:hover,
-.gallery__control-next:hover {
+.hobby .gallery__control-prev:hover, .hobby .gallery__control-next:hover {
   opacity: 0.5;
 }
-
-.gallery__control-next {
+.hobby .gallery__control-next {
   transform: rotate(180deg);
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

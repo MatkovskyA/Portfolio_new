@@ -1,6 +1,8 @@
 @import "variables";
 @import "mixins";
 @import "reset";
+@import "extend";
+
 html {
     scroll-behavior: smooth;
 }
@@ -82,7 +84,7 @@ nav {
 
     .content__desc {
         padding: 15px;
-        max-width: 600px;
+        max-width: 500px;
         position: absolute;
         z-index: 2;
         bottom: 40px;
@@ -125,20 +127,12 @@ nav {
         position: relative;
         .h3_wrapper {
             margin-bottom: 30px;
-            // position: relative;
-            // display: inline-block;
             h3 {
                 position: relative;
             }
         }
         .h3_wrapper::before {
-            content: "";
-            background-image: url(../resourses/icons8-круг.svg);
-            width: 100px;
-            height: 100px;
-            position: absolute;  
-            top: -34px;
-            left: -35px;
+            @extend %extend-h3-wrapper-before;
         }
         .h2_wrapper {
             margin-bottom: 50px;
@@ -220,12 +214,7 @@ nav {
         }
     }
     .h3_wrapper::before {
-        content: "";
-        background-image: url(../resourses/icons8-круг.svg);
-        width: 100px;
-        height: 100px;
-        position: absolute;  
-        top: -34px;
+        @extend %extend-h3-wrapper-before;
         left: -15px;
     }
     .h2_wrapper {
@@ -294,21 +283,12 @@ nav {
     margin-bottom: 30px;
 }
 .h3_wrapper {
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
     h3 {
         position: relative;
     }
 }
 .h3_wrapper::before {
-    content: "";
-    background-image: url(../resourses/icons8-круг.svg);
-    width: 100px;
-    height: 100px;
-    position: absolute;  
-    top: -35px;
-    right: -30px;
+    @extend %extend-h3-wrapper-before;
 }
 .project {
     position: relative;
@@ -350,21 +330,12 @@ nav {
         margin-bottom: 70px;
     }
     .h3_wrapper {
-        margin-bottom: 30px;
-        position: relative;
-        display: inline-block;
         h3 {
             position: relative;
         }
     }
     .h3_wrapper::before {
-        content: "";
-        background-image: url(../resourses/icons8-круг.svg);
-        width: 100px;
-        height: 100px;
-        position: absolute;  
-        top: -35px;
-        left: -35px;
+        @extend %extend-h3-wrapper-before;
     }
     .skills__block_img-weight {
         max-width: 100px;
@@ -375,27 +346,50 @@ nav {
 }
 
 // form -------------------------------------------
+form {
+    min-width: 320px;
+    font-size: 20px;
+    line-height: 28px;
+    border: 2px solid yellow;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    div {
+        padding-bottom: 10px;
+    }
+    input[type=submit] {
+        background-color: rgb(255, 225, 0);
+        
+    }
+    textarea {
+        resize: none;
+        width: 100%;
+        min-height: 120px;
+    }
+}
+.form {
+    padding: 50px 0;
+    background: $gridBackColor;
+    .form__wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+}
 .form__title {
     text-align: center;
     position: relative;
     margin-bottom: 70px;
 }
 .h3_wrapper {
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
     h3 {
         position: relative;
     }
 }
 .h3_wrapper::before {
-    content: "";
-    background-image: url(../resourses/icons8-круг.svg);
-    width: 100px;
-    height: 100px;
-    position: absolute;  
-    top: -35px;
-    left: -35px;
+    @extend %extend-h3-wrapper-before;
+}
+.form__img img {
+    margin-top: 20%;
 }
 
 //hobby --------------------------------------------
@@ -417,13 +411,7 @@ nav {
     }
 }
 .h3_wrapper::before {
-    content: "";
-    background-image: url(../resourses/icons8-круг.svg);
-    width: 100px;
-    height: 100px;
-    position: absolute;  
-    top: -35px;
-    left: -35px;
+    @extend %extend-h3-wrapper-before;
 }
 }
 
@@ -482,71 +470,72 @@ nav {
     position: relative;
     width: 100%;
     height: 717px;
+
+    .gallery__slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+    }
+    
+    .slide__image {
+        width: 100%;
+    }
+    
+    .gallery__slide_active {
+        opacity: 1;
+    }
+    
+    .slide__image {
+        width: 100%;
+        height: 717px;
+        object-fit: cover;
+    }
+    
+    .gallery__slide-title {
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+        width: 100%;
+    
+    }
+    
+    .gallery__controls-wrapper {
+        position: absolute;
+        bottom: 162px;
+        left: -3px;
+        width: 100%;
+        z-index: 2;
+    }
+    
+    .gallery__text {
+        max-width: 443px;
+        font-size: 30px;
+        line-height: 41px;
+        color: #FFFFFF;
+    }
+    
+    .gallery__controls {
+        display: flex;
+    }
+    
+    .gallery__control-prev, .gallery__control-next {
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: url(../resourses/ic_back.png), left center/auto no-repeat;
+        background-repeat: no-repeat;
+    }
+    
+    .gallery__control-prev:hover, .gallery__control-next:hover {
+        opacity: 0.5;
+    }
+    .gallery__control-next {
+        transform: rotate(180deg);
+    }
 }
 
 
-.gallery__slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: all 1s ease-in-out;
-}
-
-.slide__image {
-    width: 100%;
-}
-
-.gallery__slide_active {
-    opacity: 1;
-}
-
-.slide__image {
-    width: 100%;
-    height: 717px;
-    object-fit: cover;
-}
-
-.gallery__slide-title {
-    position: absolute;
-    bottom: 60px;
-    left: 0;
-    width: 100%;
-
-}
-
-.gallery__controls-wrapper {
-    position: absolute;
-    bottom: 162px;
-    left: -3px;
-    width: 100%;
-    z-index: 2;
-}
-
-.gallery__text {
-    max-width: 443px;
-    font-size: 30px;
-    line-height: 41px;
-    color: #FFFFFF;
-}
-
-  .gallery__controls {
-    display: flex;
-}
-
-  .gallery__control-prev, .gallery__control-next {
-    width: 40px;
-    height: 40px;
-    border: none;
-    background: url(../resourses/ic_back.png), left center/auto no-repeat;
-    background-repeat: no-repeat;
-  }
-
-  .gallery__control-prev:hover, .gallery__control-next:hover {
-    opacity: 0.5;
-  }
-  .gallery__control-next {
-    transform: rotate(180deg);
-  }
