@@ -1,7 +1,7 @@
-@import "variables";
-@import "mixins";
 @import "reset";
+@import "variables";
 @import "extend";
+@import "mixins";
 
 html {
     scroll-behavior: smooth;
@@ -101,7 +101,7 @@ nav {
     margin-bottom: 30px;
     
     a{
-        background-color: rgb(255, 225, 0);
+        background-color: $yellow;
         padding: 10px 20px;
         margin: 10px;
         font-size: 24px;
@@ -137,7 +137,7 @@ nav {
         
         h2 {
             padding-bottom: 10px;
-            border-bottom: 3px solid rgb(255, 225, 0);
+            border-bottom: 3px solid $yellow;
             border-bottom-right-radius: 10px;
             display: inline;
         }
@@ -201,7 +201,7 @@ nav {
     }
     h2 {
         padding-bottom: 10px;
-        border-bottom: 3px solid rgb(255, 225, 0);
+        border-bottom: 3px solid $yellow;
         border-bottom-right-radius: 10px;
         display: inline;
     }
@@ -307,7 +307,7 @@ form {
     min-width: 320px;
     font-size: 20px;
     line-height: 28px;
-    border: 2px solid yellow;
+    border: 2px solid $yellow;
     background: #ffffff;
     border-radius: 10px;
     padding: 15px;
@@ -315,7 +315,7 @@ form {
         padding-bottom: 10px;
     }
     input[type=submit] {
-        background-color: rgb(255, 225, 0);
+        background-color: $yellow;
         
     }
     textarea {
@@ -403,9 +403,7 @@ nav {
     .footer__nav:hover {
         opacity: 0.5;
     }
-
 }
-
 .footer__text {
     font-size: 20px;
     opacity: 0.5;
@@ -419,7 +417,6 @@ nav {
     position: relative;
     width: 100%;
     height: 717px;
-
     .gallery__slide {
         position: absolute;
         top: 0;
@@ -429,21 +426,17 @@ nav {
         opacity: 0;
         transition: all 1s ease-in-out;
     }
-    
     .slide__image {
         width: 100%;
     }
-    
     .gallery__slide_active {
         opacity: 1;
     }
-    
     .slide__image {
         width: 100%;
         height: 717px;
         object-fit: cover;
     }
-    
     .gallery__slide-title {
         position: absolute;
         bottom: 60px;
@@ -451,7 +444,6 @@ nav {
         width: 100%;
     
     }
-    
     .gallery__controls-wrapper {
         position: absolute;
         bottom: 162px;
@@ -459,18 +451,15 @@ nav {
         width: 100%;
         z-index: 2;
     }
-    
     .gallery__text {
         max-width: 443px;
         font-size: 30px;
         line-height: 41px;
         color: #FFFFFF;
     }
-    
     .gallery__controls {
         display: flex;
     }
-    
     .gallery__control-prev, .gallery__control-next {
         width: 40px;
         height: 40px;
@@ -478,7 +467,6 @@ nav {
         background: url(../resourses/ic_back.png), left center/auto no-repeat;
         background-repeat: no-repeat;
     }
-    
     .gallery__control-prev:hover, .gallery__control-next:hover {
         opacity: 0.5;
     }
