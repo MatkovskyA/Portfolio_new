@@ -764,8 +764,17 @@ footer .footer__text {
   }
 }
 @media (max-width: 576px) {
+  main .content {
+    background-image: url(/resourses/my-foto.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 115%;
+  }
   main .content__info a {
     display: block;
+  }
+  main .content__video_background {
+    display: none;
   }
   main .education .education__inner ul {
     display: block;

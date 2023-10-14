@@ -242,10 +242,20 @@
 @media (max-width: $breakpoint_sm) {
     main {
         //section content
+        .content {
+            background-image: url(/resourses/my-foto.png);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: 115%;
+        }
         .content__info {
             a {
                 display: block;
             }
+        }
+        .content__video_background {
+            display: none;
+
         }
         //section my__education
         .education .education__inner ul {
