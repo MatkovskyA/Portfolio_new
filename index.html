@@ -253,27 +253,28 @@
                     <h2>Заполните форму ниже ⬇️<br>или напишите в WhatsApp / Telegram</h2>
                 </div>
                 <div class="form__wrapper">
-                    <form action="">
+                    <form action="mail.php" id="form" method="POST">
                         <div>
-                            <label for="userName">Ваше имя:</label>
-                            <input id="userName" type="text" placeholder="Введите имя" required>
+                            <label for="userName">Ваше имя*:</label>
+                            <input name="userName" id="userName" type="text" placeholder="Введите имя" class="required">
                         </div>
                         <div>
-                            <label for="userEmail">Ваша почта:</label>
-                            <input id="userEmail" type="email" placeholder="Введите ваш email" required>
+                            <label for="userPhone">Ваш телефон*:</label>
+                            <input name="userPhone" id="userPhone" type="tel" placeholder="Введите ваш тел."
+                                class="email">
                         </div>
                         <div>
                             <h4>Укажите ваш запрос:</h4>
-                            <label>Сайт</label>
-                            <input id="site" type="checkbox">
-                            <label for="landingPage">Лендинг пейдж</label>
-                            <input id="landingPage" type="checkbox">
+                            <label for="site">Сайт</label>
+                            <input name="site" id="site" type="checkbox"><br>
+                            <label for="landingPage">Лендинг</label>
+                            <input name="landing" id="landingPage" type="checkbox"><br>
                             <label for="application">Мобильное приложение</label>
-                            <input id="application" type="checkbox">
+                            <input name="application" id="application" type="checkbox">
                         </div>
                         <div>
                             <label for="select-pages">Выберите кол-во страниц</label>
-                            <select name="" id="select-pages">
+                            <select name="pages" id="select-pages">
                                 <option value="">1</option>
                                 <option value="">2</option>
                                 <option value="">3</option>
@@ -282,10 +283,18 @@
                                 <option value="">более 5</option>
                             </select>
                         </div>
-                        <textarea name="" id="" placeholder="Введите ваш вопрос" required></textarea>
+                        <div>
+                            <label for="form_message"></label>
+                            <textarea name="message" id="form_message" placeholder="Введите ваш вопрос"></textarea>
+                        </div>
                         <div>
                             <label for="file">Прикрепить файл</label><br>
-                            <input type="file" id="file">
+                            <input name="files" type="file" id="file">
+                        </div>
+                        <div>
+                            <input type="checkbox" name="agreement" id="form__agreement" class="required">
+                            <label for="form__agreement"><span>Даю свое согласие на обработку персональных
+                                    данных*</span></label>
                         </div>
                         <div>
                             <input type="submit" value="Отправить сообщение">
@@ -296,6 +305,16 @@
                     </div>
                 </div>
             </div>
+            </div>
+        </section>
+        <section class="youtube__video">
+            <div class="container">
+                <div class="video__wrapper">
+                    <div class="video"
+                        data-src="https://www.youtube.com/embed/KCJ4pdavu-g?si=KHgYDQHdBpJiidwT?autoplay=1">
+
+                    </div>
+                </div>
             </div>
         </section>
         <!--
