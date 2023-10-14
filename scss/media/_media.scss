@@ -1,0 +1,142 @@
+@media (max-width: $breakpoint_lg) {
+    h1 {
+        font-size: 38px;
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+    
+    h3 {
+        font-size: 26px;
+    }
+    
+    // .h3_wrapper {
+    //     margin-bottom: 30px;
+    // }
+    
+    // h4 {
+    //     font-size: 20px;
+    // }
+    
+    // p {
+    //     font-size: 16px;
+    // }
+}
+
+@media (max-width: $breakpoint_md) {
+    h1 {
+        font-size: 34px;
+        line-height: 40px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    // .h3_wrapper {
+    //     margin-bottom: 30px;
+    // }
+    
+    // h4 {
+    //     font-size: 20px;
+    // }
+    
+    // p {
+    //     font-size: 16px;
+    // }
+}
+
+@media (max-width: $breakpoint_sm) {
+    h1 {
+        font-size: 30px;
+    }
+    
+    h2 {
+        font-size: 26px;
+    }
+    
+    h3 {
+        font-size: 22px;
+    }
+    
+    // .h3_wrapper {
+    //     margin-bottom: 30px;
+    // }
+    
+    // h4 {
+    //     font-size: 20px;
+    // }
+    
+    // p {
+    //     font-size: 16px;
+    // }
+}
+@media (max-width: $breakpoint_lg) {
+    header {
+        nav .nav_items {
+            padding: 5px;
+        }
+        img.logo {
+            max-width: 80%;
+        }
+        p {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: $breakpoint_md) {
+    header {
+        padding: 10px 0;
+        nav .nav_items {
+            padding: 0px;
+            ul {
+                display: block;
+            }
+        }
+        img.logo {
+            max-width: 70%;
+        }
+    }
+}
+
+// @media (max-width: $breakpoint_sm) {
+//     header {
+// //..
+//     }
+// }
+
+@media (max-width: $breakpoint_lg) {
+
+}
+
+@media (max-width: $breakpoint_md) {
+    header {
+        padding: 10px 0;
+        nav .nav_items {
+            padding: 0px;
+            ul {
+                display: block;
+            }
+        }
+        img.logo {
+            max-width: 70%;
+        }
+    }
+}
+
+@media (max-width: $breakpoint_sm) {
+    main {
+        .content__info {
+            a {
+                display: block;
+            }
+
+        }
+    }
+}

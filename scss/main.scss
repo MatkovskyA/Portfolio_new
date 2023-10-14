@@ -3,6 +3,7 @@
 @import "extend";
 @import "mixins";
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -26,30 +27,31 @@ header {
     z-index: 10;
     background-color: rgba(121, 121, 121, 0.3);
 
-}
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;  
-    .nav_items {
-        background: $white;
-        padding: 10px;
-        border-radius: 20px;
-        ul {
+    nav {
         display: flex;
         align-items: center;
-        text-align: center;
-        justify-content: space-around; 
-        li {
-            margin: 10px;
+        justify-content: space-between;  
+        .nav_items {
+            background: $white;
+            padding: 10px;
+            border-radius: 20px;
+            ul {
+            display: flex;
+            align-items: center;
             text-align: center;
+            justify-content: space-around; 
+            li {
+                margin: 10px;
+                text-align: center;
+            }
+        }
+        }
+        .logo {
+            border-radius: 30px;
         }
     }
-    }
-    .logo {
-        border-radius: 30px;
-    }
 }
+
 
 .h4_wrapper {
     margin-bottom: 25px;
@@ -83,6 +85,7 @@ nav {
     }
 
     .content__desc {
+        margin-right: 15px;
         padding: 15px;
         max-width: 600px;
         position: absolute;
@@ -331,37 +334,38 @@ form {
         display: flex;
         justify-content: space-around;
     }
+    .form__title {
+        text-align: center;
+        position: relative;
+        margin-bottom: 70px;
+    }
+    .h3_wrapper::before {
+        @extend %extend-h3-wrapper-before;
+    }
+    .form__img img {
+        margin-top: 20%;
+    }
 }
-.form__title {
-    text-align: center;
-    position: relative;
-    margin-bottom: 70px;
-}
-.h3_wrapper::before {
-    @extend %extend-h3-wrapper-before;
-}
-.form__img img {
-    margin-top: 20%;
-}
+
 
 //hobby --------------------------------------------
 .hobby {
     background: $gridBackColor;
     padding-bottom: 100px;
     padding-top: 50px;
-.hobby__title {
-    text-align: center;
-    position: relative;
-    margin-bottom: 30px;
-}
-.h3_wrapper {
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
-}
-.h3_wrapper::before {
-    @extend %extend-h3-wrapper-before;
-}
+    .hobby__title {
+        text-align: center;
+        position: relative;
+        margin-bottom: 30px;
+    }
+    .h3_wrapper {
+        margin-bottom: 30px;
+        position: relative;
+        display: inline-block;
+    }
+    .h3_wrapper::before {
+        @extend %extend-h3-wrapper-before;
+    }
 }
 
 .family {
@@ -375,41 +379,39 @@ form {
 
 footer {
     background-color: $color;
-
-
-nav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 85px;
-    a:last-child {
-        margin-right: 0;
+    nav {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 85px;
+        a:last-child {
+            margin-right: 0;
+        }
     }
-}
 
-.footer__inner {
-    padding-top: 60px;
-    padding-bottom: 30px;
-}
+    .footer__inner {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
 
-.footer__nav {
-    margin-right: 53px;
-    font-size: 18px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $white;
-    cursor: pointer;
+    .footer__nav {
+        margin-right: 53px;
+        font-size: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $white;
+        cursor: pointer;
 
-    .footer__nav:hover {
+        .footer__nav:hover {
+            opacity: 0.5;
+        }
+    }
+    .footer__text {
+        font-size: 20px;
         opacity: 0.5;
+        text-align: center;
+        color: $white;
     }
-}
-.footer__text {
-    font-size: 20px;
-    opacity: 0.5;
-    text-align: center;
-    color: $white;
-}
 }
 
 // slider
@@ -475,4 +477,4 @@ nav {
     }
 }
 
-
+@import "./media/media";
