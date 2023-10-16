@@ -7,17 +7,14 @@
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: 'Inter', sans-serif;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
-
 section {
     margin-bottom: 130px;
 }
-
 header {
     padding: 15px 0;
     position: fixed;
@@ -26,7 +23,6 @@ header {
     width: 100%;
     z-index: 10;
     background-color: rgba(121, 121, 121, 0.3);
-
     nav {
         display: flex;
         align-items: center;
@@ -51,14 +47,11 @@ header {
         }
     }
 }
-
-
 .h4_wrapper {
     margin-bottom: 25px;
     position: relative;
     z-index: 2;
 }
-
 //SECTION CONTENT------------------------------------------------
 .content {
     position: relative;
@@ -72,8 +65,7 @@ header {
         z-index: 1;
         width: 100%;
         height: 100%;
-        overflow: hidden;
-
+        overflow: hidden;ё
         .myVideo {
             position: absolute;
             left: 50%;
@@ -83,7 +75,6 @@ header {
             min-height: 100%;
         }
     }
-
     .content__desc {
         margin-right: 15px;
         padding: 15px;
@@ -95,14 +86,11 @@ header {
         background-color: rgba(121, 121, 121, 0.4);
         border-radius: 20px;
     }
-
     h3, h1 {
         margin-bottom: 30px;
     }
-
     .content__info {
     margin-bottom: 30px;
-    
     a{
         background-color: $yellow;
         padding: 10px 20px;
@@ -119,12 +107,10 @@ header {
     padding: 50px 0px;
     display: flex;
     gap: 50px;
-
     .present__image {
         max-width: 500px;
         min-width: 400px;
     }
-
     .present__inner {
         margin-top: 40px;
         position: relative;
@@ -137,7 +123,6 @@ header {
         .h2_wrapper {
             margin-bottom: 50px;
         }
-        
         h2 {
             padding-bottom: 10px;
             border-bottom: 3px solid $yellow;
@@ -146,7 +131,6 @@ header {
         }
         .p_wrapper {
             margin-bottom: 50px;
-
             p {
                 padding-right: 50px;
             }
@@ -159,17 +143,14 @@ header {
         row-gap: 40px;
         padding-left: 35px;
         position: relative;
-    
         li {
             width: calc(50% - 25px);
         }
-    
         .h4__image_bef1::before {
             content: "";
             background-image: url(../resourses/develop.svg);
             @extend %extend-competencions-image-before;
         }
-    
         .h4__image_bef::before {
             content: "";
             background-image: url(../resourses/mob.svg);
@@ -181,7 +162,6 @@ header {
 //SECTION EDUCATION------------------------------------------------
 .education {
     display: flex;
-
     .education__inner{
         margin-top: 40px;
         position: relative;
@@ -221,7 +201,6 @@ header {
         row-gap: 40px;
         padding-left: 35px;
         margin-right: 40px;
-    
         li {
             width: calc(50% - 25px);
         }
@@ -230,7 +209,6 @@ header {
             background-image: url(../resourses/diplom.svg);
             @extend %extend-h4-image-bef;
         }
-
         .h4__image_bef.hat::before {
             background-image: url(../resourses/hat.svg);
             @extend %extend-h4-image-bef;
@@ -241,7 +219,6 @@ header {
         min-width: 400px;
     }
 }
-
 //SECTION PROJECTS------------------------------------------------
 .my__projects {
     background: $gridBackColor;
@@ -271,7 +248,6 @@ header {
     }
 }
 }
-
 // section SKILLS------------------------------------------------
 .skills {
     ul {
@@ -284,7 +260,6 @@ header {
     li {
         height: 250px;
         max-width: 300px;
-
         img {
             padding-bottom: 20px;
         }
@@ -304,7 +279,6 @@ header {
         padding-top: 25px;
     }
 }
-
 // form -------------------------------------------
 form {
     min-width: 320px;
@@ -326,7 +300,6 @@ form {
         width: 100%;
         min-height: 120px;
     }
-
 }
 .form {
     padding: 50px 0;
@@ -360,8 +333,6 @@ form {
         padding-top: 56.25%;
         background: pink url(../resourses/play_ku5cqrxit1nx.svg) no-repeat center;
         background-size: 20%;
-        
-
         iframe {
             position: absolute;
             top: 0;
@@ -377,8 +348,6 @@ form {
         background-size: 22%;
     }
 }
-
-
 //hobby --------------------------------------------
 .hobby {
     background: $gridBackColor;
@@ -397,14 +366,10 @@ form {
     .h3_wrapper::before {
         @extend %extend-h3-wrapper-before;
     }
-
     .hobby__images {
         display: flex;
         flex-wrap: wrap;
         padding: 0 4px;
-    }
-    .hobby__images p {
-        margin-top: 30px;
     }
     .images__column {
         position: relative;
@@ -423,11 +388,8 @@ form {
     .images__column img {
         padding: 5px;
     }
-
 }
-
 // footer ----------
-
 footer {
     background-color: $color;
     nav {
@@ -438,12 +400,10 @@ footer {
             margin-right: 0;
         }
     }
-
     .footer__inner {
         padding-top: 60px;
         padding-bottom: 30px;
     }
-
     .footer__nav {
         margin-right: 53px;
         font-size: 18px;
@@ -452,7 +412,6 @@ footer {
         text-decoration: none;
         color: $white;
         cursor: pointer;
-
         .footer__nav:hover {
             opacity: 0.5;
         }
