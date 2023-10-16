@@ -331,7 +331,7 @@ form {
         position: relative;
         width: 100%;
         padding-top: 56.25%;
-        background: pink url(../resourses/play_ku5cqrxit1nx.svg) no-repeat center;
+        background: $gridBackColor url(../resourses/play_ku5cqrxit1nx.svg) no-repeat center;
         background-size: 20%;
         iframe {
             position: absolute;
@@ -379,7 +379,7 @@ form {
             position: absolute;
             font-size: 12px;
             left: 5px;
-            background-color: #fff;
+            background-color: $white;
             text-transform: uppercase;
             padding: 3px;
             border-radius: 3px;
