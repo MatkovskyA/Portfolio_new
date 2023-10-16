@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 * {
   padding: 0px;
   margin: 0px;
@@ -18,7 +19,9 @@
 }
 
 /* Links */
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
   text-decoration: none;
   cursor: pointer;
 }
@@ -29,7 +32,12 @@ a:hover {
 }
 
 /* Common */
-aside, nav, footer, header, section, main {
+aside,
+nav,
+footer,
+header,
+section,
+main {
   display: block;
 }
 
@@ -67,7 +75,8 @@ p {
   line-height: normal;
 }
 
-ul, ul li {
+ul,
+ul li {
   list-style: none;
 }
 
@@ -75,13 +84,17 @@ img {
   vertical-align: top;
 }
 
-img, svg {
+img,
+svg {
   max-width: 100%;
   height: auto;
 }
 
 /* Form */
-input, textarea, button, select {
+input,
+textarea,
+button,
+select {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -93,7 +106,8 @@ input[type=file] {
   border-bottom: none;
 }
 
-textarea, input[type=submit] {
+textarea,
+input[type=submit] {
   border: 2px solid silver;
   border-radius: 5px;
 }
@@ -106,7 +120,8 @@ input::-ms-clear {
   display: none;
 }
 
-button, input[type=submit] {
+button,
+input[type=submit] {
   display: inline-block;
   box-shadow: none;
   background-color: transparent;
@@ -114,8 +129,10 @@ button, input[type=submit] {
   cursor: pointer;
 }
 
-input:focus, input:active,
-button:focus, button:active,
+input:focus,
+input:active,
+button:focus,
+button:active,
 textarea:focus {
   outline: none;
 }
@@ -124,7 +141,12 @@ label {
   cursor: pointer;
 }
 
-.hobby .h3_wrapper::before, .form .h3_wrapper::before, .skills .h3_wrapper::before, .my__projects .h3_wrapper::before, .education .h3_wrapper::before, .about__me .present .present__inner .h3_wrapper::before {
+.hobby .h3_wrapper::before,
+.form .h3_wrapper::before,
+.skills .h3_wrapper::before,
+.my__projects .h3_wrapper::before,
+.education .h3_wrapper::before,
+.about__me .present .present__inner .h3_wrapper::before {
   content: "";
   background-image: url(../resourses/icons8-круг.svg);
   width: 100px;
@@ -134,7 +156,8 @@ label {
   left: -35px;
 }
 
-.about__me .present .competencies ul .h4__image_bef::before, .about__me .present .competencies ul .h4__image_bef1::before {
+.about__me .present .competencies ul .h4__image_bef::before,
+.about__me .present .competencies ul .h4__image_bef1::before {
   background-repeat: no-repeat;
   width: 35px;
   height: 35px;
@@ -142,7 +165,8 @@ label {
   left: -40px;
 }
 
-.education .education__inner ul .h4__image_bef.hat::before, .education .education__inner ul .h4__image_bef::before {
+.education .education__inner ul .h4__image_bef.hat::before,
+.education .education__inner ul .h4__image_bef::before {
   background-repeat: no-repeat;
   background-size: cover;
   width: 75px;
@@ -175,26 +199,31 @@ header {
   z-index: 10;
   background-color: rgba(121, 121, 121, 0.3);
 }
+
 header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 header nav .nav_items {
   background: #fff;
   padding: 10px;
   border-radius: 20px;
 }
+
 header nav .nav_items ul {
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: space-around;
 }
+
 header nav .nav_items ul li {
   margin: 10px;
   text-align: center;
 }
+
 header nav .logo {
   border-radius: 30px;
 }
@@ -210,6 +239,7 @@ header nav .logo {
   min-height: 100vh;
   width: 100%;
 }
+
 .content .content__video_background {
   position: absolute;
   left: 0;
@@ -220,7 +250,8 @@ header nav .logo {
   height: 100%;
   overflow: hidden;
 }
-.content .content__video_background ё .myVideo {
+
+.content .content__video_background .myVideo {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -228,6 +259,7 @@ header nav .logo {
   min-width: 100%;
   min-height: 100%;
 }
+
 .content .content__desc {
   margin-right: 15px;
   padding: 15px;
@@ -239,12 +271,16 @@ header nav .logo {
   background-color: rgba(121, 121, 121, 0.4);
   border-radius: 20px;
 }
-.content h3, .content h1 {
+
+.content h3,
+.content h1 {
   margin-bottom: 30px;
 }
+
 .content .content__info {
   margin-bottom: 30px;
 }
+
 .content .content__info a {
   background-color: rgb(255, 225, 0);
   padding: 10px 20px;
@@ -256,53 +292,65 @@ header nav .logo {
 .about__me {
   background: rgb(254, 224, 229);
 }
+
 .about__me .present {
   padding: 50px 0px;
   display: flex;
   gap: 50px;
 }
+
 .about__me .present .present__image {
   max-width: 500px;
   min-width: 400px;
 }
+
 .about__me .present .present__inner {
   margin-top: 40px;
   position: relative;
 }
+
 .about__me .present .present__inner .h3_wrapper {
   margin-bottom: 30px;
 }
+
 .about__me .present .present__inner .h2_wrapper {
   margin-bottom: 50px;
 }
+
 .about__me .present .present__inner h2 {
   padding-bottom: 10px;
   border-bottom: 3px solid rgb(255, 225, 0);
   border-bottom-right-radius: 10px;
   display: inline;
 }
+
 .about__me .present .present__inner .p_wrapper {
   margin-bottom: 50px;
 }
+
 .about__me .present .present__inner .p_wrapper p {
   padding-right: 50px;
 }
+
 .about__me .present .competencies ul {
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 50px;
-       column-gap: 50px;
+  column-gap: 50px;
   row-gap: 40px;
   padding-left: 35px;
   position: relative;
 }
+
 .about__me .present .competencies ul li {
   width: calc(50% - 25px);
 }
+
 .about__me .present .competencies ul .h4__image_bef1::before {
   content: "";
   background-image: url(../resourses/develop.svg);
 }
+
 .about__me .present .competencies ul .h4__image_bef::before {
   content: "";
   background-image: url(../resourses/mob.svg);
@@ -311,56 +359,70 @@ header nav .logo {
 .education {
   display: flex;
 }
+
 .education .education__inner {
   margin-top: 40px;
   position: relative;
 }
+
 .education .education__inner h2 {
   padding-bottom: 0;
 }
+
 .education .h3_wrapper {
   margin-bottom: 30px;
 }
+
 .education .h3_wrapper h3 {
   margin-left: 20px;
 }
+
 .education .h3_wrapper::before {
   left: -15px;
 }
+
 .education .h2_wrapper {
   margin-bottom: 50px;
 }
+
 .education h2 {
   padding-bottom: 10px;
   border-bottom: 3px solid rgb(255, 225, 0);
   border-bottom-right-radius: 10px;
   display: inline;
 }
+
 .education .p_wrapper {
   margin-bottom: 50px;
 }
+
 .education .p_wrapper p {
   padding-right: 50px;
 }
+
 .education .education__inner ul {
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 50px;
-       column-gap: 50px;
+  column-gap: 50px;
   row-gap: 40px;
   padding-left: 35px;
   margin-right: 40px;
 }
+
 .education .education__inner ul li {
   width: calc(50% - 25px);
 }
+
 .education .education__inner ul .h4__image_bef::before {
   content: "";
   background-image: url(../resourses/diplom.svg);
 }
+
 .education .education__inner ul .h4__image_bef.hat::before {
   background-image: url(../resourses/hat.svg);
 }
+
 .education .present__image {
   max-width: 500px;
   min-width: 400px;
@@ -371,18 +433,22 @@ header nav .logo {
   padding-bottom: 100px;
   padding-top: 50px;
 }
+
 .my__projects .projects__title {
   text-align: center;
   position: relative;
   margin-bottom: 30px;
 }
+
 .my__projects .project {
   position: relative;
 }
+
 .my__projects .project img {
   border-radius: 30px;
   box-shadow: 15px 15px 25px 15px #ccc;
 }
+
 .my__projects .project p {
   position: absolute;
   padding: 10px 25px;
@@ -399,21 +465,26 @@ header nav .logo {
   row-gap: 40px;
   text-align: center;
 }
+
 .skills li {
   height: 250px;
   max-width: 300px;
 }
+
 .skills li img {
   padding-bottom: 20px;
 }
+
 .skills .skills__title {
   text-align: center;
   position: relative;
   margin-bottom: 70px;
 }
+
 .skills .skills__block_img-weight {
   max-width: 100px;
 }
+
 .skills .jQuery {
   padding-top: 25px;
 }
@@ -427,12 +498,15 @@ form {
   border-radius: 10px;
   padding: 15px;
 }
+
 form div {
   padding-bottom: 10px;
 }
+
 form input[type=submit] {
   background-color: rgb(255, 225, 0);
 }
+
 form textarea {
   resize: none;
   width: 100%;
@@ -443,15 +517,18 @@ form textarea {
   padding: 50px 0;
   background: rgb(254, 224, 229);
 }
+
 .form .form__wrapper {
   display: flex;
   justify-content: space-around;
 }
+
 .form .form__title {
   text-align: center;
   position: relative;
   margin-bottom: 70px;
 }
+
 .form .form__img img {
   margin-top: 20%;
 }
@@ -461,13 +538,15 @@ form textarea {
   margin: 0 auto;
   display: flex;
 }
+
 .youtube__video .video {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
-  background: pink url(../resourses/play_ku5cqrxit1nx.svg) no-repeat center;
+  background: rgb(254, 224, 229) url(../resourses/play_ku5cqrxit1nx.svg) no-repeat center;
   background-size: 20%;
 }
+
 .youtube__video .video iframe {
   position: absolute;
   top: 0;
@@ -477,6 +556,7 @@ form textarea {
   height: 100%;
   width: 100%;
 }
+
 .youtube__video .video:hover {
   cursor: pointer;
   background-size: 22%;
@@ -487,26 +567,31 @@ form textarea {
   padding-bottom: 100px;
   padding-top: 50px;
 }
+
 .hobby .hobby__title {
   text-align: center;
   position: relative;
   margin-bottom: 30px;
 }
+
 .hobby .h3_wrapper {
   margin-bottom: 30px;
   position: relative;
   display: inline-block;
 }
+
 .hobby .hobby__images {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
 }
+
 .hobby .images__column {
   position: relative;
   float: left;
   width: 33%;
 }
+
 .hobby .images__column p {
   position: absolute;
   font-size: 12px;
@@ -516,6 +601,7 @@ form textarea {
   padding: 3px;
   border-radius: 3px;
 }
+
 .hobby .images__column img {
   padding: 5px;
 }
@@ -523,18 +609,22 @@ form textarea {
 footer {
   background-color: rgba(44, 37, 37, 0.8);
 }
+
 footer nav {
   display: flex;
   justify-content: center;
   margin-bottom: 85px;
 }
+
 footer nav a:last-child {
   margin-right: 0;
 }
+
 footer .footer__inner {
   padding-top: 60px;
   padding-bottom: 30px;
 }
+
 footer .footer__nav {
   margin-right: 53px;
   font-size: 18px;
@@ -544,9 +634,11 @@ footer .footer__nav {
   color: #fff;
   cursor: pointer;
 }
+
 footer .footer__nav .footer__nav:hover {
   opacity: 0.5;
 }
+
 footer .footer__text {
   font-size: 20px;
   opacity: 0.5;
@@ -558,167 +650,216 @@ footer .footer__text {
   h1 {
     font-size: 38px;
   }
+
   h2 {
     font-size: 30px;
   }
+
   h3 {
     font-size: 26px;
   }
+
   section {
     margin-bottom: 80px;
   }
 }
+
 @media (max-width: 768px) {
   h1 {
     font-size: 34px;
     line-height: 40px;
   }
+
   h2 {
     font-size: 28px;
   }
+
   h3 {
     font-size: 24px;
   }
+
   section {
     margin-bottom: 60px;
   }
+
   p {
     font-size: 12px;
   }
 }
+
 @media (max-width: 576px) {
   h1 {
     font-size: 30px;
   }
+
   h2 {
     font-size: 26px;
   }
+
   h3 {
     font-size: 22px;
   }
+
   section {
     margin-bottom: 40px;
   }
 }
+
 @media (max-width: 1024px) {
   header nav .nav_items {
     padding: 5px;
   }
+
   header img.logo {
     max-width: 80%;
   }
+
   header p {
     display: none;
   }
+
   main .about__me .present {
     gap: 30px;
   }
+
   main .about__me .present .present__image {
     min-width: 300px;
   }
+
   main .education .present__image {
     min-width: 300px;
   }
+
   main .education .education__inner ul {
     margin-right: 10px;
   }
+
   main .education .education__inner ul li:last-child:nth-child(2n+1) {
     width: 75%;
   }
+
   main .my__projects {
     padding-bottom: 70px;
   }
+
   main .my__projects .project p {
     left: 25px;
     bottom: 25px;
     padding: 10px 15px;
     margin-right: 25px;
   }
+
   main .skills .skills__title {
     margin-bottom: 40px;
   }
+
   main .skills ul {
     row-gap: 25px;
   }
+
   main .form .form__title {
     margin-bottom: 40px;
   }
 }
+
 @media (max-width: 768px) {
   header {
     padding: 10px 0;
   }
+
   header nav .nav_items {
     padding: 0px;
   }
+
   header nav .nav_items ul {
     display: block;
   }
+
   header img.logo {
     max-width: 70%;
   }
+
   main .content .content__info {
     margin-bottom: 0px;
   }
+
   main .content h3 {
     margin-bottom: 10px;
   }
+
   main .content .content__desc {
     bottom: 15px;
   }
+
   main .about__me .present .present__inner {
     text-align: center;
   }
+
   main .about__me .present .present__image {
     display: none;
   }
+
   main .about__me .present .present__inner .competencies {
     text-align: left;
   }
+
   main .about__me .present .competencies ul {
     display: block;
   }
+
   main .about__me .present .competencies ul li {
     width: 100%;
     margin-bottom: 20px;
   }
+
   main .education .present__image {
     display: none;
   }
+
   main .education .education__inner {
     text-align: center;
   }
+
   main .education .education__inner ul {
     text-align: left;
   }
+
   main .my__projects .project p {
     left: 15px;
     bottom: 15px;
     padding: 5px 15px;
     margin-right: 15px;
   }
+
   main .skills p {
     font-size: 14px;
   }
+
   main .skills .skills__title {
     margin-bottom: 40px;
   }
+
   main .skills ul {
     row-gap: 25px;
   }
+
   main .form__img {
     display: none;
   }
+
   .hobby {
     padding-bottom: 10px;
   }
+
   footer .footer__inner {
     padding: 30px 0;
   }
+
   footer nav {
     margin-bottom: 50px;
   }
 }
+
 @media (max-width: 576px) {
   main .content {
     background-image: url(../resourses/my-foto.png);
@@ -726,25 +867,32 @@ footer .footer__text {
     background-position: 50%;
     background-size: 145%;
   }
+
   main .content__info a {
     display: block;
   }
+
   main .content__video_background {
     display: none;
   }
+
   main .education .education__inner ul {
     display: block;
   }
+
   main .education .education__inner ul li {
     width: 100%;
     margin-bottom: 30px;
   }
+
   main .h4_wrapper {
     margin-bottom: 10px;
   }
+
   main .education .education__inner ul li:last-child:nth-child(2n+1) {
     width: 100%;
   }
+
   main .my__projects .project p {
     left: 5px;
     bottom: 10px;
@@ -753,28 +901,37 @@ footer .footer__text {
     font-size: 10px;
     border-radius: 10px;
   }
+
   main .my__projects .project img {
     border-radius: 10px;
   }
+
   main .skills ul {
     row-gap: 0px;
   }
+
   main .skills li {
     height: 210px;
   }
+
   main input[type=file] {
     max-width: 100%;
   }
+
   main .hobby .images__column p {
     position: absolute;
     font-size: 8px;
   }
+
   footer nav {
     display: block;
   }
+
   footer .footer__nav {
     display: block;
     margin-right: 0;
     margin-bottom: 5px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
