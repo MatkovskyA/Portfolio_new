@@ -226,6 +226,10 @@
             display: none;
         }
     }
+        // section hobby 
+        .hobby {
+            padding-bottom: 10px;
+            }
     //footer
     footer {
         .footer__inner  {
@@ -236,7 +240,6 @@
         }
         
     }
-
 }
 //Tag styles for mw 576px
 @media (max-width: $breakpoint_sm) {
@@ -255,7 +258,6 @@
         }
         .content__video_background {
             display: none;
-
         }
         //section my__education
         .education .education__inner ul {
@@ -295,6 +297,14 @@
         }
         input[type=file] {
             max-width: 100%;
+        }
+    
+    // section hobby 
+    .hobby {
+        .images__column p {
+                position: absolute;
+                font-size: 8px;
+            }
         }
     }
     // footer

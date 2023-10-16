@@ -497,12 +497,30 @@ form textarea {
   position: relative;
   display: inline-block;
 }
-.family {
+.hobby .hobby__images {
   display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
-.family img {
-  max-width: 300px;
-  margin-right: 30px;
+.hobby .hobby__images p {
+  margin-top: 30px;
+}
+.hobby .images__column {
+  position: relative;
+  float: left;
+  width: 33%;
+}
+.hobby .images__column p {
+  position: absolute;
+  font-size: 12px;
+  left: 5px;
+  background-color: #fff;
+  text-transform: uppercase;
+  padding: 3px;
+  border-radius: 3px;
+}
+.hobby .images__column img {
+  padding: 5px;
 }
 
 footer {
@@ -537,68 +555,6 @@ footer .footer__text {
   opacity: 0.5;
   text-align: center;
   color: #fff;
-}
-
-.hobby {
-  position: relative;
-  width: 100%;
-  height: 717px;
-}
-.hobby .gallery__slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: all 1s ease-in-out;
-}
-.hobby .slide__image {
-  width: 100%;
-}
-.hobby .gallery__slide_active {
-  opacity: 1;
-}
-.hobby .slide__image {
-  width: 100%;
-  height: 717px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.hobby .gallery__slide-title {
-  position: absolute;
-  bottom: 60px;
-  left: 0;
-  width: 100%;
-}
-.hobby .gallery__controls-wrapper {
-  position: absolute;
-  bottom: 162px;
-  left: -3px;
-  width: 100%;
-  z-index: 2;
-}
-.hobby .gallery__text {
-  max-width: 443px;
-  font-size: 30px;
-  line-height: 41px;
-  color: #FFFFFF;
-}
-.hobby .gallery__controls {
-  display: flex;
-}
-.hobby .gallery__control-prev, .hobby .gallery__control-next {
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: url(../resourses/ic_back.png), left center/auto no-repeat;
-  background-repeat: no-repeat;
-}
-.hobby .gallery__control-prev:hover, .hobby .gallery__control-next:hover {
-  opacity: 0.5;
-}
-.hobby .gallery__control-next {
-  transform: rotate(180deg);
 }
 
 @media (max-width: 1024px) {
@@ -756,6 +712,9 @@ footer .footer__text {
   main .form__img {
     display: none;
   }
+  .hobby {
+    padding-bottom: 10px;
+  }
   footer .footer__inner {
     padding: 30px 0;
   }
@@ -808,6 +767,10 @@ footer .footer__text {
   }
   main input[type=file] {
     max-width: 100%;
+  }
+  main .hobby .images__column p {
+    position: absolute;
+    font-size: 8px;
   }
   footer nav {
     display: block;
