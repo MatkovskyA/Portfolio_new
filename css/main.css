@@ -202,7 +202,6 @@ header nav .logo {
 .h4_wrapper {
   margin-bottom: 25px;
   position: relative;
-  z-index: 2;
 }
 
 .content {
@@ -220,7 +219,7 @@ header nav .logo {
   height: 100%;
   overflow: hidden;
 }
-.content .content__video_background ё .myVideo {
+.content .content__video_background .myVideo {
   position: absolute;
   left: 50%;
   top: 50%;
