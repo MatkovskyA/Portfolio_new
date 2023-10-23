@@ -134,7 +134,7 @@
         </section>
         <section class="my__projects" id="projects">
             <div class="container">
-                <div class="projects__title">
+                <div class="block__title">
                     <div class="h3_wrapper">
                         <h3>Портфолио</h3>
                     </div>
@@ -164,7 +164,7 @@
         </section>
         <section class="skills" id="skills">
             <div class="container">
-                <div class="skills__title">
+                <div class="block__title">
                     <div class="h3_wrapper">
                         <h3>Про навыки</h3>
                     </div>
@@ -247,22 +247,21 @@
         </section>
         <section class="form">
             <div class="container">
-                <div class="form__title">
+                <div class="block__title">
                     <div class="h3_wrapper">
                         <h3>Связаться со мной просто</h3>
                     </div>
                     <h2>Заполните форму ниже ⬇️<br>или напишите в WhatsApp / Telegram</h2>
                 </div>
                 <div class="form__wrapper">
-                    <form action="mail.php" id="form" method="POST">
+                    <form action="#" id="form">
                         <div>
                             <label for="userName">Ваше имя*:</label>
-                            <input name="userName" id="userName" type="text" placeholder="Введите имя" class="required">
+                            <input name="userName" id="userName" type="text" placeholder="Введите имя" required>
                         </div>
                         <div>
                             <label for="userPhone">Ваш телефон*:</label>
-                            <input name="userPhone" id="userPhone" type="tel" placeholder="Введите ваш тел."
-                                class="email">
+                            <input name="userPhone" id="userPhone" type="tel" placeholder="Введите ваш тел." required>
                         </div>
                         <div>
                             <h4>Укажите ваш запрос:</h4>
@@ -274,7 +273,7 @@
                             <input name="application" id="application" type="checkbox">
                         </div>
                         <div>
-                            <label for="select-pages">Выберите кол-во страниц</label>
+                            <label for="pages">Выберите кол-во страниц</label>
                             <select name="pages" id="select-pages">
                                 <option value="">1</option>
                                 <option value="">2</option>
@@ -285,8 +284,9 @@
                             </select>
                         </div>
                         <div>
-                            <label for="form_message"></label>
-                            <textarea name="message" id="form_message" placeholder="Введите ваш вопрос"></textarea>
+                            <label for="message"></label>
+                            <textarea name="message" id="form_message" placeholder="Введите ваш вопрос"
+                                required></textarea>
                         </div>
                         <div>
                             <label for="file">Прикрепить файл</label><br>
@@ -294,7 +294,7 @@
                         </div>
                         <div>
                             <input type="checkbox" name="agreement" id="form__agreement" class="required">
-                            <label for="form__agreement"><span>Даю свое согласие на обработку персональных
+                            <label for="agreement"><span>Даю свое согласие на обработку персональных
                                     данных*</span></label>
                         </div>
                         <div>
@@ -329,7 +329,7 @@
         </section>
         <section class="hobby" id="hobby">
             <div class="container">
-                <div class="hobby__title">
+                <div class="block__title">
                     <div class="h3_wrapper">
                         <h3>Про хобби и увлечения</h3>
                     </div>

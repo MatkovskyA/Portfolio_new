@@ -166,6 +166,12 @@ section {
   margin-bottom: 130px;
 }
 
+.block__title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 70px;
+}
+
 header {
   padding: 15px 0;
   position: fixed;
@@ -371,11 +377,6 @@ header nav .logo {
   padding-bottom: 100px;
   padding-top: 50px;
 }
-.my__projects .projects__title {
-  text-align: center;
-  position: relative;
-  margin-bottom: 30px;
-}
 .my__projects .project {
   position: relative;
 }
@@ -405,11 +406,6 @@ header nav .logo {
 }
 .skills li img {
   padding-bottom: 20px;
-}
-.skills .skills__title {
-  text-align: center;
-  position: relative;
-  margin-bottom: 70px;
 }
 .skills .skills__block_img-weight {
   max-width: 100px;
@@ -446,11 +442,6 @@ form textarea {
 .form .form__wrapper {
   display: flex;
   justify-content: space-around;
-}
-.form .form__title {
-  text-align: center;
-  position: relative;
-  margin-bottom: 70px;
 }
 .form .form__img img {
   margin-top: 20%;
@@ -489,11 +480,6 @@ form textarea {
   background: rgb(254, 224, 229);
   padding-bottom: 100px;
   padding-top: 50px;
-}
-.hobby .hobby__title {
-  text-align: center;
-  position: relative;
-  margin-bottom: 30px;
 }
 .hobby .h3_wrapper {
   margin-bottom: 30px;
