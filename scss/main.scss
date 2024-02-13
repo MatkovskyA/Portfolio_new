@@ -3,414 +3,430 @@
 @import "extend";
 @import "mixins";
 
-
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
-    font-family: 'Inter', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 section {
-    margin-bottom: 130px;
+  margin-bottom: 130px;
 }
 .block__title {
-    text-align: center;
-    position: relative;
-    margin-bottom: 70px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 70px;
 }
+
 header {
-    padding: 15px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    background-color: rgba(121, 121, 121, 0.3);
-    nav {
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(121, 121, 121, 0.3);
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .nav_items {
+      background: $white;
+      padding: 10px;
+      border-radius: 20px;
+      ul {
         display: flex;
         align-items: center;
-        justify-content: space-between;  
-        .nav_items {
-            background: $white;
-            padding: 10px;
-            border-radius: 20px;
-            ul {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content: space-around; 
-            li {
-                margin: 10px;
-                text-align: center;
-            }
+        text-align: center;
+        justify-content: space-around;
+        li {
+          margin: 10px;
+          text-align: center;
         }
-        }
-        .logo {
-            border-radius: 30px;
-        }
+      }
     }
+    .logo {
+      border-radius: 30px;
+    }
+  }
 }
 .h4_wrapper {
-    margin-bottom: 25px;
-    position: relative;
+  margin-bottom: 25px;
+  position: relative;
 }
 //SECTION CONTENT------------------------------------------------
 .content {
-    position: relative;
-    min-height: 100vh;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  .content__video_background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
     width: 100%;
-    .content__video_background {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;//ё
-        .myVideo {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 100%;
-            min-height: 100%;
-        }
+    height: 100%;
+    overflow: hidden;
+    .myVideo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
     }
-    .content__desc {
-        margin-right: 15px;
-        padding: 15px;
-        max-width: 600px;
-        position: absolute;
-        z-index: 2;
-        bottom: 40px;
-        color: $white;
-        background-color: rgba(121, 121, 121, 0.4);
-        border-radius: 20px;
-    }
-    h3, h1 {
-        margin-bottom: 30px;
-    }
-    .content__info {
+  }
+  .content__desc {
+    margin-right: 15px;
+    padding: 15px;
+    max-width: 600px;
+    position: absolute;
+    z-index: 2;
+    bottom: 40px;
+    color: $white;
+    background-color: rgba(121, 121, 121, 0.4);
+    border-radius: 20px;
+  }
+  h3,
+  h1 {
     margin-bottom: 30px;
-    a{
-        background-color: $yellow;
-        padding: 10px 20px;
-        margin: 10px;
-        font-size: 24px;
-        border-radius: 10px;
-        color: black;
+  }
+  .content__info {
+    margin-bottom: 30px;
+    a {
+      background-color: $yellow;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 24px;
+      border-radius: 10px;
+      color: black;
     }
-}
+  }
 }
 // SECTION ABOUT__ME------------------------------------------------
 .about__me {
-    background: $gridBackColor;
-.present {
+  background: $gridBackColor;
+  .present {
     padding: 50px 0px;
     display: flex;
     gap: 50px;
     .present__image {
-        max-width: 500px;
-        min-width: 400px;
+      max-width: 500px;
+      min-width: 400px;
     }
     .present__inner {
-        margin-top: 40px;
-        position: relative;
-        .h3_wrapper {
-            margin-bottom: 30px;
-        }
-        .h3_wrapper::before {
-            @extend %extend-h3-wrapper-before;
-        }
-        .h2_wrapper {
-            margin-bottom: 50px;
-        }
-        h2 {
-            padding-bottom: 10px;
-            border-bottom: 3px solid $yellow;
-            border-bottom-right-radius: 10px;
-            display: inline;
-        }
-        .p_wrapper {
-            margin-bottom: 50px;
-            p {
-                padding-right: 50px;
-            }
-        }
-    }
-    .competencies ul {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 50px;
-        row-gap: 40px;
-        padding-left: 35px;
-        position: relative;
-        li {
-            width: calc(50% - 25px);
-        }
-        .h4__image_bef1::before {
-            content: "";
-            background-image: url(../resourses/develop.svg);
-            @extend %extend-competencions-image-before;
-        }
-        .h4__image_bef::before {
-            content: "";
-            background-image: url(../resourses/mob.svg);
-            @extend %extend-competencions-image-before;
-        }
-    }
-}
-}
-//SECTION EDUCATION------------------------------------------------
-.education {
-    display: flex;
-    .education__inner{
-        margin-top: 40px;
-        position: relative;
-        h2 {
-            padding-bottom: 0;
-        }
-    }
-    .h3_wrapper {
+      margin-top: 40px;
+      position: relative;
+      .h3_wrapper {
         margin-bottom: 30px;
-        h3 {
-            margin-left: 20px;
-        }
-    }
-    .h3_wrapper::before {
+      }
+      .h3_wrapper::before {
         @extend %extend-h3-wrapper-before;
-        left: -15px;
-    }
-    .h2_wrapper {
+      }
+      .h2_wrapper {
         margin-bottom: 50px;
-    }
-    h2 {
+      }
+      h2 {
         padding-bottom: 10px;
         border-bottom: 3px solid $yellow;
         border-bottom-right-radius: 10px;
         display: inline;
-    }
-    .p_wrapper {
+      }
+      .p_wrapper {
         margin-bottom: 50px;
         p {
-            padding-right: 50px;
+          padding-right: 50px;
         }
+      }
     }
-.education__inner ul {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 50px;
-        row-gap: 40px;
-        padding-left: 35px;
-        margin-right: 40px;
-        li {
-            width: calc(50% - 25px);
-        }
-        .h4__image_bef::before {
-            content: "";
-            background-image: url(../resourses/diplom.svg);
-            @extend %extend-h4-image-bef;
-        }
-        .h4__image_bef.hat::before {
-            background-image: url(../resourses/hat.svg);
-            @extend %extend-h4-image-bef;
-        }
+    .competencies ul {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 50px;
+      row-gap: 40px;
+      padding-left: 35px;
+      position: relative;
+      li {
+        width: calc(50% - 25px);
+      }
+      .h4__image_bef1::before {
+        content: "";
+        background-image: url(../resourses/develop.svg);
+        @extend %extend-competencions-image-before;
+      }
+      .h4__image_bef::before {
+        content: "";
+        background-image: url(../resourses/mob.svg);
+        @extend %extend-competencions-image-before;
+      }
     }
-    .present__image {
-        max-width: 500px;
-        min-width: 400px;
+  }
+}
+//SECTION EDUCATION------------------------------------------------
+.education {
+  display: flex;
+  .education__inner {
+    margin-top: 40px;
+    position: relative;
+    h2 {
+      padding-bottom: 0;
     }
+  }
+  .h3_wrapper {
+    margin-bottom: 30px;
+    h3 {
+      margin-left: 20px;
+    }
+  }
+  .h3_wrapper::before {
+    @extend %extend-h3-wrapper-before;
+    left: -15px;
+  }
+  .h2_wrapper {
+    margin-bottom: 50px;
+  }
+  h2 {
+    padding-bottom: 10px;
+    border-bottom: 3px solid $yellow;
+    border-bottom-right-radius: 10px;
+    display: inline;
+  }
+  .p_wrapper {
+    margin-bottom: 50px;
+    p {
+      padding-right: 50px;
+    }
+  }
+  .education__inner ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 40px;
+    padding-left: 35px;
+    margin-right: 40px;
+    li {
+      width: calc(50% - 25px);
+    }
+    .h4__image_bef::before {
+      content: "";
+      background-image: url(../resourses/diplom.svg);
+      @extend %extend-h4-image-bef;
+    }
+    .h4__image_bef.hat::before {
+      background-image: url(../resourses/hat.svg);
+      @extend %extend-h4-image-bef;
+    }
+  }
+  .present__image {
+    max-width: 500px;
+    min-width: 400px;
+  }
 }
 //SECTION PROJECTS------------------------------------------------
 .my__projects {
-    background: $gridBackColor;
-    padding-bottom: 100px;
-    padding-top: 50px;
-.h3_wrapper::before {
+  background: $gridBackColor;
+  padding-bottom: 100px;
+  padding-top: 50px;
+  .h3_wrapper::before {
     @extend %extend-h3-wrapper-before;
-}
-.project {
+  }
+  .project {
     position: relative;
     img {
-        border-radius: 30px;
-        box-shadow: 15px 15px 25px 15px #ccc;
+      border-radius: 30px;
+      box-shadow: 15px 15px 25px 15px #ccc;
     }
     p {
-        position: absolute;
-        padding: 10px 25px;
-        bottom: 50px;
-        left: 50px;
-        background: rgb(255, 225, 0);
-        border-radius: 20px;
+      position: absolute;
+      padding: 10px 25px;
+      bottom: 50px;
+      left: 50px;
+      background: rgb(255, 225, 0);
+      border-radius: 20px;
     }
-}
+  }
 }
 // section SKILLS------------------------------------------------
 .skills {
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        row-gap: 40px;
-        text-align: center;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 40px;
+    text-align: center;
+  }
+  li {
+    height: 250px;
+    max-width: 300px;
+    img {
+      padding-bottom: 20px;
     }
-    li {
-        height: 250px;
-        max-width: 300px;
-        img {
-            padding-bottom: 20px;
-        }
-    }
-    .h3_wrapper::before {
-        @extend %extend-h3-wrapper-before;
-    }
-    .skills__block_img-weight {
-        max-width: 100px;
-    }
-    .jQuery {
-        padding-top: 25px;
-    }
+  }
+  .h3_wrapper::before {
+    @extend %extend-h3-wrapper-before;
+  }
+  .skills__block_img-weight {
+    max-width: 100px;
+    max-height: 85px;
+  }
+  .jQuery {
+    padding-top: 25px;
+  }
 }
 // form -------------------------------------------
 form {
-    min-width: 320px;
-    font-size: 20px;
-    line-height: 28px;
-    border: 2px solid $yellow;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 15px;
-    div {
-        padding-bottom: 10px;
-    }
-    input[type=submit] {
-        background-color: $yellow;
-        
-    }
-    textarea {
-        resize: none;
-        width: 100%;
-        min-height: 120px;
-    }
+  min-width: 320px;
+  font-size: 20px;
+  line-height: 28px;
+  border: 2px solid $yellow;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  div {
+    padding-bottom: 10px;
+  }
+  input[type="submit"] {
+    background-color: $yellow;
+  }
+  textarea {
+    resize: none;
+    width: 100%;
+    min-height: 120px;
+  }
 }
 .form {
-    padding: 50px 0;
-    background: $gridBackColor;
-    .form__wrapper {
-        display: flex;
-        justify-content: space-around;
-    }
-    .h3_wrapper::before {
-        @extend %extend-h3-wrapper-before;
-    }
-    .form__img img {
-        margin-top: 20%;
-    }
+  padding: 50px 0;
+  background: $gridBackColor;
+  .form__wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+  .h3_wrapper::before {
+    @extend %extend-h3-wrapper-before;
+  }
+  .form__img img {
+    margin-top: 20%;
+  }
 }
 
 .youtube__video {
-    .video__wrapper {
-        max-width: 700px;
-        margin: 0 auto;
-        display: flex;
+  .video__wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: $gridBackColor url(../resourses/play_ku5cqrxit1nx.svg) no-repeat
+      center;
+    background-size: 20%;
+    iframe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
     }
-    .video {
-        position: relative;
-        width: 100%;
-        padding-top: 56.25%;
-        background: $gridBackColor url(../resourses/play_ku5cqrxit1nx.svg) no-repeat center;
-        background-size: 20%;
-        iframe {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-        }
-    }
-    .video:hover {
-        cursor: pointer;
-        background-size: 22%;
-    }
+  }
+  .video:hover {
+    cursor: pointer;
+    background-size: 22%;
+  }
 
-    .yandex__map {
-        text-align: center;
-    }
+  .yandex__map {
+    text-align: center;
+  }
 }
 //hobby --------------------------------------------
 .hobby {
-    background: $gridBackColor;
-    padding-bottom: 100px;
-    padding-top: 50px;
-    .h3_wrapper {
-        margin-bottom: 30px;
-        position: relative;
-        display: inline-block;
+  background: $gridBackColor;
+  padding-bottom: 100px;
+  padding-top: 50px;
+  .h3_wrapper {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+  }
+  .h3_wrapper::before {
+    @extend %extend-h3-wrapper-before;
+  }
+  .hobby__images {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    p {
+      padding-top: 15px;
+      text-align: center;
     }
-    .h3_wrapper::before {
-        @extend %extend-h3-wrapper-before;
+  }
+  .images__column {
+    position: relative;
+    float: left;
+    width: 33%;
+    p {
+      position: absolute;
+      font-size: 12px;
+      left: 5px;
+      background-color: $white;
+      text-transform: uppercase;
+      padding: 3px;
+      border-radius: 3px;
     }
-    .hobby__images {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 4px;
-    }
-    .images__column {
-        position: relative;
-        float: left;
-        width:  33%;
-        p {
-            position: absolute;
-            font-size: 12px;
-            left: 5px;
-            background-color: $white;
-            text-transform: uppercase;
-            padding: 3px;
-            border-radius: 3px;
-        }
-    }
-    .images__column img {
-        padding: 5px;
-    }
+  }
+  .images__column img {
+    padding: 5px;
+  }
 }
 // footer ----------
 footer {
-    background-color: $color;
-    nav {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 85px;
-        a:last-child {
-            margin-right: 0;
-        }
+  background-color: $color;
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 85px;
+    a:last-child {
+      margin-right: 0;
     }
-    .footer__inner {
-        padding-top: 60px;
-        padding-bottom: 30px;
+  }
+  .footer__inner {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  .footer__nav {
+    margin-right: 53px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+    cursor: pointer;
+    .footer__nav:hover {
+      opacity: 0.5;
     }
-    .footer__nav {
-        margin-right: 53px;
-        font-size: 18px;
-        text-align: center;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $white;
-        cursor: pointer;
-        .footer__nav:hover {
-            opacity: 0.5;
-        }
-    }
-    .footer__text {
-        font-size: 20px;
-        opacity: 0.5;
-        text-align: center;
-        color: $white;
-    }
+  }
+  .footer__text {
+    font-size: 20px;
+    opacity: 0.5;
+    text-align: center;
+    color: $white;
+  }
+}
+
+// слайдер
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
 }
 
 @import "./media/media";

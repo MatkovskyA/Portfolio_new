@@ -1,13 +1,12 @@
 // window.addEventListener('DOMContentLoaded', function () {
 //     const video =  document.querySelector('.video');
 
-
 //     video.addEventListener('click', function() {
-//         // проверяем на наличие класса ready у видео. Если есть - ничего не делаем. 
+//         // проверяем на наличие класса ready у видео. Если есть - ничего не делаем.
 //         if (video.classList.contains('ready')) {
 //             return
 //         }
-//         // если нету - добавляем класс 
+//         // если нету - добавляем класс
 //         video.classList.add('ready');
 //         //получаем ссылку на видео из html
 //         let videoSrc = video.dataset.src;
@@ -15,3 +14,6 @@
 //         video.insertAdjacentHTML('afterbegin', '<iframe src="' + videoSrc + '" title="YouTube video player" borders="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
 //     })
 // })
+$(document).ready(function () {
+  $(".slider").slick();
+});

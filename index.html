@@ -12,6 +12,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Open+Sans:wght@400;600&family=Roboto&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
 </head>
 
 <body>
@@ -41,7 +44,6 @@
         <section class="content" id="content">
             <div class="content__video_background">
                 <video class="myVideo" autoplay muted loop>
-                    <!-- Задвоеный класс myVideo -->
                     <source src="resourses/output(compress-video-online.com).mp4" type="video/mp4">
                 </video>
             </div>
@@ -140,26 +142,29 @@
                     </div>
                     <h2>Мои последние работы</h2>
                 </div>
-                <ul>
-                    <li>
-                        <div class="project">
-                            <p>Верстка и настройка сайта(+слайдеры, попапы, адаптив)</p>
-                            <img src="resourses/Metrica.png" alt="Студия Метрика">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="project">
-                            <p>Верстка интернет магазина(+слайдеры, карусели, анимация, адаптив) </p>
-                            <img src="resourses/AnitaDongre.png" alt="Интернет магазин">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="project">
-                            <p>Верстка сайта(+анимация, попап, адаптив)</p>
-                            <img src="resourses/Green-corp.png" alt="Солнечные панели">
-                        </div>
-                    </li>
-                </ul>
+
+                <div class="slider">
+                    <div class="slider-items">
+                        <img src="resourses/AnitaD.png" alt="Indian-Wears">
+                        <a href="#">Сайт для дизайнера индийской одежды</a>
+                    </div>
+                    <div class="slider-items">
+                        <img src="resourses/Metrika.png" alt="Дизайн-студия">
+                        <a href="#">Сайт для дизайн-студии METRIKA</a>
+                    </div>
+                    <div class="slider-items">
+                        <img src="resourses/TodoList.png" alt="TodoList">
+                        <a href="#">Приложение "Список задач" с актуальным прогнозом погоды и курсом валют</a>
+                    </div>
+                    <div class="slider-items">
+                        <img src="resourses/Restoraunt.png" alt="Restaurant">
+                        <a href="#">Сайт для ресторана Food Exxe Relo</a>
+                    </div>
+                    <div class="slider-items">
+                        <img src="resourses/State.png" alt="State">
+                        <a href="#"></a>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="skills" id="skills">
@@ -199,16 +204,6 @@
                             </div>
                             <p>Этот язык программирования позволяет оживить все что угодно: слайдеры, окна, подсказки,
                                 вкладки, получение данных от сервера и многое другое</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="skills__block jQuery">
-                            <img src="resourses/Jquery.svg" alt="Jquery_img">
-                            <div class="h4_wrapper">
-                                <h4 class="h4__image_bef jq">jQuery</h4>
-                            </div>
-                            <p>Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект
-                                мы её не будем, но навык работы с ней присутствует</p>
                         </div>
                     </li>
                     <li>
@@ -338,27 +333,27 @@
                 <div class="hobby__images">
                     <div class="images__column">
                         <p>горы</p>
-                        <img src="resourses/elbrus.jpg" alt="elbrus">
+                        <img src="resourses/elbrus_optimized.jpg" alt="elbrus">
                         <p>семья</p>
-                        <img src="resourses/family-run2.jpeg" alt="family">
+                        <img src="resourses/family-run2_optimized.jpeg" alt="family">
                     </div>
                     <div class="images__column">
                         <p>преодоление себя</p>
-                        <img src="resourses/marathone.jpeg" alt="marathone">
+                        <img src="resourses/marathone_optimized.jpeg" alt="marathone">
                         <p>мотоциклы</p>
-                        <img src="resourses/moto.jpeg" alt="Moto">
+                        <img src="resourses/moto_optimized.jpeg" alt="Moto">
                         <p>новые вызовы</p>
-                        <img src="resourses/liga-hero.jpg" alt="liga-hero">
+                        <img src="resourses/liga-hero_optimized.jpg" alt="liga-hero">
                     </div>
                     <div class="images__column">
                         <p>бег</p>
-                        <img src="resourses/run.jpg" alt="nigtht-run">
+                        <img src="resourses/run_optimized.jpg" alt="nigtht-run">
                         <p>ощущение полета</p>
-                        <img src="resourses/fly.jpg" alt="fly">
+                        <img src="resourses/fly_optimized.jpg" alt="fly">
                         <p>подводный мир</p>
-                        <img src="resourses/swim.jpeg" alt="diving">
+                        <img src="resourses/swim_optimized.jpeg" alt="diving">
                         <p>природа</p>
-                        <img src="resourses/woter.jpeg" alt="kayaking">
+                        <img src="resourses/woter_optimized.jpeg" alt="kayaking">
                     </div>
                     <p>И самое главное - живите! Проживайте каждый день осознано и максимально полезно для себя и
                         окружающих!</p>
@@ -379,7 +374,11 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="slick.min.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>
