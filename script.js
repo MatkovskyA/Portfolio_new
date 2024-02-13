@@ -1,19 +1,26 @@
-// window.addEventListener('DOMContentLoaded', function () {
-//     const video =  document.querySelector('.video');
+//Появление блоков при скролле
+function onEntry(entry) {
+  entry.forEach((element) => {
+    if (element.isIntersecting) {
+      element.target.classList.add("animation-show");
+    }
+  });
+}
 
-//     video.addEventListener('click', function() {
-//         // проверяем на наличие класса ready у видео. Если есть - ничего не делаем.
-//         if (video.classList.contains('ready')) {
-//             return
-//         }
-//         // если нету - добавляем класс
-//         video.classList.add('ready');
-//         //получаем ссылку на видео из html
-//         let videoSrc = video.dataset.src;
-//         //добавляем и запускаем по клику видео
-//         video.insertAdjacentHTML('afterbegin', '<iframe src="' + videoSrc + '" title="YouTube video player" borders="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
-//     })
-// })
+let options = {
+  threshold: [0.5],
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll(".animation");
+
+for (let elem of elements) {
+  observer.observe(elem);
+}
+//slider slick
 $(document).ready(function () {
-  $(".slider").slick();
+  $(".slider").slick({
+    dots: true,
+    adaptiveHeight: true,
+    speed: 1000,
+  });
 });

@@ -19,7 +19,13 @@ section {
   position: relative;
   margin-bottom: 70px;
 }
-
+.animation {
+  opacity: 0;
+}
+.animation.animation-show {
+  opacity: 1;
+  transition: opacity 1s;
+}
 header {
   padding: 15px 0;
   position: fixed;
@@ -57,6 +63,9 @@ header {
   margin-bottom: 25px;
   position: relative;
 }
+
+//animation
+
 //SECTION CONTENT------------------------------------------------
 .content {
   position: relative;
@@ -234,20 +243,8 @@ header {
   .h3_wrapper::before {
     @extend %extend-h3-wrapper-before;
   }
-  .project {
-    position: relative;
-    img {
-      border-radius: 30px;
-      box-shadow: 15px 15px 25px 15px #ccc;
-    }
-    p {
-      position: absolute;
-      padding: 10px 25px;
-      bottom: 50px;
-      left: 50px;
-      background: rgb(255, 225, 0);
-      border-radius: 20px;
-    }
+  .block__title {
+    margin-bottom: 30px;
   }
 }
 // section SKILLS------------------------------------------------
@@ -283,7 +280,7 @@ form {
   font-size: 20px;
   line-height: 28px;
   border: 2px solid $yellow;
-  background: #ffffff;
+  background: $white;
   border-radius: 10px;
   padding: 15px;
   div {
@@ -313,38 +310,38 @@ form {
   }
 }
 
-.youtube__video {
-  .video__wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-    display: flex;
-  }
-  .video {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
-    background: $gridBackColor url(../resourses/play_ku5cqrxit1nx.svg) no-repeat
-      center;
-    background-size: 20%;
-    iframe {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-    }
-  }
-  .video:hover {
-    cursor: pointer;
-    background-size: 22%;
-  }
+// .youtube__video {
+//   .video__wrapper {
+//     max-width: 700px;
+//     margin: 0 auto;
+//     display: flex;
+//   }
+//   .video {
+//     position: relative;
+//     width: 100%;
+//     padding-top: 56.25%;
+//     background: $gridBackColor url(../resourses/play_ku5cqrxit1nx.svg) no-repeat
+//       center;
+//     background-size: 20%;
+//     iframe {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       height: 100%;
+//       width: 100%;
+//     }
+//   }
+//   .video:hover {
+//     cursor: pointer;
+//     background-size: 22%;
+//   }
 
-  .yandex__map {
-    text-align: center;
-  }
-}
+//   .yandex__map {
+//     text-align: center;
+//   }
+// }
 //hobby --------------------------------------------
 .hobby {
   background: $gridBackColor;
@@ -359,8 +356,6 @@ form {
     @extend %extend-h3-wrapper-before;
   }
   .hobby__images {
-    display: flex;
-    flex-wrap: wrap;
     padding: 0 4px;
     p {
       padding-top: 15px;
@@ -427,6 +422,90 @@ footer {
 
 .slick-track {
   display: flex;
+  align-items: flex-start;
+}
+.slider {
+  padding: 0 30px;
+  position: relative;
+}
+.slider-img {
+  margin-bottom: 10px;
+}
+.slick-arrow {
+  position: absolute;
+  top: 45%;
+  z-index: 9;
+  font-size: 0;
+}
+.slick-arrow:hover {
+  scale: 1.05;
+}
+
+.slick-arrow.slick-prev {
+  left: 30px;
+  background-image: url(../resourses/right-arrow-svgrepo-com.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  transform: rotate(180deg);
+  height: 30px;
+
+  border: none;
+}
+.slick-arrow.slick-next {
+  right: 30px;
+  background-image: url(../resourses/right-arrow-svgrepo-com.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.slider-link {
+  color: $bgSlickDots;
+  position: relative;
+}
+.slider-link::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: $bgSlickDots;
+  width: 0;
+  transition: 0.5s;
+}
+
+.slider-link:hover:after {
+  width: 100%;
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-dots li {
+  list-style: none;
+}
+
+.slick-dots li.slick-active button {
+  background-color: transparent;
+  border: 1px solid rgb(63, 63, 63);
+  scale: 1.05;
+}
+.slick-dots button {
+  margin: 5px;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: $bgSlickDots;
+  cursor: pointer;
 }
 
 @import "./media/media";
